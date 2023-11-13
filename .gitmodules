@@ -14,3 +14,8 @@
 # permissions and limitations under the License.
 
 # Description: Git submodules of the picolibrary-microchip-sam-d21da1 repository.
+
+# arm-none-eabi-gcc CMake toolchain
+[submodule "toolchain-arm-none-eabi-gcc"]
+	path = toolchain-arm-none-eabi-gcc
+	url = ../toolchain-arm-none-eabi-gcc
