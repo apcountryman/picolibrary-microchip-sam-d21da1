@@ -21,6 +21,19 @@ project(
     LANGUAGES CXX
 )
 
+# general project configuration
+option(
+    PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING
+    "picolibrary-microchip-sam-d21da1: enable interactive testing"
+    OFF
+)
+
+# load additional CMake modules
+list(
+    APPEND CMAKE_MODULE_PATH
+    "${CMAKE_CURRENT_SOURCE_DIR}/toolchain-arm-none-eabi-gcc"
+)
+
 # configure compilation and linking
 option(
     PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS
@@ -52,4 +65,49 @@ if( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS} )
         -fno-threadsafe-statics
         -ffile-prefix-map=${CMAKE_CURRENT_SOURCE_DIR}/=
     )
+
+    if( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
+        set(
+            PICOLIBRARY_MICROCHIP_SAM_D21DA1_TESTING_INTERACTIVE_LINKER_SCRIPT
+            "" CACHE STRING
+            "picolibrary-microchip-sam-d21da1: interactive testing linker script"
+        )
+
+        add_link_options(
+            -mcpu=cortex-m0plus
+            -mthumb
+            --specs=nano.specs
+            --specs=nosys.specs
+            -T "${PICOLIBRARY_MICROCHIP_SAM_D21DA1_TESTING_INTERACTIVE_LINKER_SCRIPT}"
+        )
+    endif( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
 endif( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS} )
+
+# configure OpenOCD
+if( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
+    include( openocd-utilities )
+
+    set(
+        PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_SEARCH_PATH
+        "" CACHE STRING
+        "picolibrary-microchip-sam-d21da1: OpenOCD configuration files and scripts search paths"
+    )
+    set(
+        PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_FILES
+        "" CACHE STRING
+        "picolibrary-microchip-sam-d21da1: OpenOCD configuration files to load and scripts to execute"
+    )
+    set(
+        PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_DEBUG_LEVEL
+        "" CACHE STRING
+        "picolibrary-microchip-sam-d21da1: OpenOCD debug level"
+    )
+    set(
+        PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_COMMANDS
+        "" CACHE STRING
+        "picolibrary-microchip-sam-d21da1: OpenOCD commands to execute on server startup"
+    )
+endif( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
+
+# library tests
+add_subdirectory( test )

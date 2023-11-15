@@ -13,7 +13,8 @@
 # KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-# Description: picolibrary-microchip-sam-d21da1 ATSAMD21G18A release configuration.
+# Description: picolibrary-microchip-sam-d21da1 ATSAMD21G18A Arduino Zero interactive
+#       testing configuration.
 
 # build configuration
 set( CMAKE_BUILD_TYPE                                                "MinSizeRel" CACHE INTERNAL "" )
@@ -21,4 +22,20 @@ set( CMAKE_EXPORT_COMPILE_COMMANDS                                   ON         
 set( PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS OFF          CACHE INTERNAL "" )
 
 # interactive testing configuration
-set( PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING OFF CACHE INTERNAL "" )
+set( PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING        ON                                                            CACHE INTERNAL "" )
+set( PICOLIBRARY_MICROCHIP_SAM_D21DA1_TESTING_INTERACTIVE_LINKER_SCRIPT "${CMAKE_CURRENT_LIST_DIR}/atsamd21g18a-arduino-zero-edbg.ld" CACHE INTERNAL "" )
+
+# OpenOCD configuration
+set(
+    PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_FILES
+    ""
+    CACHE INTERNAL ""
+)
+set(
+    PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_COMMANDS
+    "source [find interface/cmsis-dap.cfg]"
+    "set CHIPNAME at91samd21g18"
+    "set ENDIAN little"
+    "source [find target/at91samdXX.cfg]"
+    CACHE INTERNAL ""
+)

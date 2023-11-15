@@ -48,6 +48,7 @@ function display_help_text()
     echo "        Specify the configuration to build. The following configurations are"
     echo "        supported:"
     echo "            release-atsamd21g18a"
+    echo "            testing-interactive-atsamd21g18a-arduino-zero"
     echo "    --help"
     echo "        Display this help text."
     echo "    --version"
@@ -100,7 +101,7 @@ function main()
 
                 local -r configuration="$1"; shift
 
-                if [[ "$configuration" != "release-atsamd21g18a" ]]; then
+                if [[ "$configuration" != "release-atsamd21g18a" && "$configuration" != "testing-interactive-atsamd21g18a-arduino-zero" ]]; then
                     abort "'$configuration' is not a supported build configuration"
                 fi
                 ;;

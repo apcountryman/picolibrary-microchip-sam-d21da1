@@ -82,7 +82,7 @@ function display_version()
 
 function ensure_filenames_are_portable()
 {
-    message "checking for non-portable (non-ASCII) filenames .... "
+    message "checking for non-portable (non-ASCII) filenames ............................. "
 
     if [[ $( git -C "$repository" diff --cached --name-only --diff-filter=A -z "$against" | LC_ALL=C tr -d '[ -~]\0' | wc -c ) != 0 ]]; then
         errors_found
@@ -95,7 +95,7 @@ function ensure_filenames_are_portable()
 
 function ensure_no_whitespace_errors_are_present()
 {
-    message "checking for whitespace errors ..................... "
+    message "checking for whitespace errors .............................................. "
 
     if ! git -C "$repository" diff-index --check --cached "$against" -- > "/dev/null" 2>&1; then
         errors_found
@@ -109,7 +109,7 @@ function ensure_no_whitespace_errors_are_present()
 
 function ensure_no_script_errors_are_present()
 {
-    message "checking for script errors ......................... "
+    message "checking for script errors .................................................. "
 
     local scripts; mapfile -t scripts < <( git -C "$repository" ls-files ':!:toolchain-arm-none-eabi-gcc/' | xargs -r -d '\n' -I '{}' find "$repository/{}" -executable ); readonly scripts
 
@@ -164,6 +164,14 @@ function ensure_no_build_errors_are_present()
 function ensure_no_release_atsamd21g18a_build_errors_are_present()
 {
     local -r build_type="release-atsamd21g18a"
+    local -r ellipsis="............................"
+
+    ensure_no_build_errors_are_present "$build_type" "$ellipsis"
+}
+
+function ensure_no_testing_interactive_atsamd21g18a_arduino_zero_build_errors_are_present()
+{
+    local -r build_type="testing-interactive-atsamd21g18a-arduino-zero"
     local -r ellipsis="..."
 
     ensure_no_build_errors_are_present "$build_type" "$ellipsis"
@@ -225,6 +233,7 @@ function main()
     ensure_no_whitespace_errors_are_present
     ensure_no_script_errors_are_present
     ensure_no_release_atsamd21g18a_build_errors_are_present
+    ensure_no_testing_interactive_atsamd21g18a_arduino_zero_build_errors_are_present
 }
 
 main "$@"
