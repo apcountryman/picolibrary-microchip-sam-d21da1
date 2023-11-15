@@ -16,7 +16,7 @@
  */
 
 /*
- * Description: picolibrary-microchip-sam-d21da1 SAMD21G18A Arduino Zero interactive
+ * Description: picolibrary-microchip-sam-d21da1 ATSAMD21G18A Arduino Zero interactive
  *      testing EDBG linker script.
  */
 

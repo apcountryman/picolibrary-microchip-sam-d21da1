@@ -7,7 +7,7 @@
 1. [Tests](#tests)
 
 ## Configuration Requirements
-picolibrary-microchip-sam-d21-da1 interactive tests have the following project
+picolibrary-microchip-sam-d21da1 interactive tests have the following project
 configuration requirements:
 - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING` must be `ON`
 
@@ -19,13 +19,12 @@ configuration options:
 - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_FILES`: OpenOCD configuration files and
   scripts to execute
 - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_DEBUG_LEVEL`: OpenOCD debug level
-- `PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_FILES`: OpenOCD commands to execute on server
-  startup
+- `PICOLIBRARY_MICROCHIP_SAM_D21DA1_OPENOCD_COMMANDS`: OpenOCD commands to execute on
+  server startup
 
 ## Test Targets
-Each picolibrary-microchip-sam-d21-da1 interactive test has the following targets:
+Each picolibrary-microchip-sam-d21da1 interactive test has the following targets:
 - `<test executable name>`: executable creation target
-  target
 - `<test executable name>-program-flash`: OpenOCD flash programming target
 
 ## Tests
