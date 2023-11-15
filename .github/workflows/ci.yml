@@ -50,6 +50,20 @@ jobs:
               shell: bash
               run: ./ci/build --configuration release-atsamd21g18a
 
+    build-testing-interactive-atsamd21g18a-arduino-zero:
+        name: Build (testing-interactive-atsamd21g18a-arduino-zero)
+        runs-on: ubuntu-20.04
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: recursive
+            - name: Install dependencies
+              shell: bash
+              run: sudo apt update && sudo apt install gcc-arm-none-eabi openocd
+            - name: Build
+              shell: bash
+              run: ./ci/build --configuration testing-interactive-atsamd21g18a-arduino-zero
+
     format:
         name: Format
         runs-on: ubuntu-20.04
