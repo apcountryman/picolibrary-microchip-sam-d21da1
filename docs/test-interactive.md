@@ -10,6 +10,8 @@
 picolibrary-microchip-sam-d21da1 interactive tests have the following project
 configuration requirements:
 - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING` must be `ON`
+- `PICOLIBRARY_MICROCHIP_SAM_D21DA1_TESTING_INTERACTIVE_LINKER_SCRIPT` must be configured
+  if `PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS` is `OFF`
 
 ## OpenOCD Configuration Options
 picolibrary-microchip-sam-d21da1 interactive tests support the following OpenOCD
