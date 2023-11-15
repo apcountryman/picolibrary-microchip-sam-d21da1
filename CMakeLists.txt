@@ -31,6 +31,7 @@ option(
 # load additional CMake modules
 list(
     APPEND CMAKE_MODULE_PATH
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/apcountryman-cmake-utilities"
     "${CMAKE_CURRENT_SOURCE_DIR}/toolchain-arm-none-eabi-gcc"
 )
 
@@ -64,6 +65,7 @@ if( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS} )
         -fno-exceptions
         -fno-threadsafe-statics
         -ffile-prefix-map=${CMAKE_CURRENT_SOURCE_DIR}/=
+        -ffile-prefix-map=${CMAKE_CURRENT_SOURCE_DIR}/picolibrary/=
     )
 
     if( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
@@ -108,6 +110,34 @@ if( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
         "picolibrary-microchip-sam-d21da1: OpenOCD commands to execute on server startup"
     )
 endif( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
+
+# configure picolibrary
+option(
+    PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY
+    "picolibrary-microchip-sam-d21da1: use parent project's picolibrary"
+    ON
+)
+if( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY} )
+    set( PICOLIBRARY_HIL_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include" CACHE INTERNAL "" )
+
+    set( PICOLIBRARY_USE_PARENT_PROJECT_BUILD_FLAGS ON CACHE INTERNAL "" )
+
+    set( PICOLIBRARY_ENABLE_AUTOMATED_TESTING OFF CACHE INTERNAL "" )
+
+    set( PICOLIBRARY_ENABLE_INTERACTIVE_TESTING "${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING}" CACHE INTERNAL "" )
+
+    add_subdirectory( picolibrary )
+endif( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY} )
+
+# capture project version information
+include( git-utilities )
+execute_git_command(
+    PICOLIBRARY_MICROCHIP_SAM_D21DA1_VERSION
+    COMMAND describe --match=none --always --dirty --broken
+)
+
+# library
+add_subdirectory( source )
 
 # library tests
 add_subdirectory( test )
