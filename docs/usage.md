@@ -6,6 +6,30 @@
 1. [Development](#development)
 
 ## Dependency
+To use picolibrary-microchip-sam-d21da1 as a dependency, simply add the subdirectory
+containing the repository to a CMake build, and link with the
+`picolibrary-microchip-sam-d21da1` static library.
+```cmake
+add_subdirectory( picolibrary-microchip-sam-d21da1 )
+```
+```cmake
+target_link_libraries(
+    foo
+    picolibrary-microchip-sam-d21da1
+)
+```
+
+The `picolibrary-microchip-sam-d21da1` static library does not include
+`::picolibrary::Microchip::SAM::D21DA1::version()`.
+To use `::picolibrary::Microchip::SAM::D21DA1::version()`, link with the
+`picolibrary-microchip-sam-d21da1-version` static library.
+```cmake
+target_link_libraries(
+    foo
+    picolibrary-microchip-sam-d21da1
+    picolibrary-microchip-sam-d21da1-version
+)
+```
 
 ### Configuration Options
 picolibrary-microchip-sam-d21da1 supports the following project configuration options:
@@ -18,6 +42,8 @@ picolibrary-microchip-sam-d21da1 supports the following project configuration op
   `PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS` is `OFF`:
     - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_TESTING_INTERACTIVE_LINKER_SCRIPT`: interactive
       testing linker script
+- `PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY` (defaults to `ON`):
+  use parent project's picolibrary
 
 ## Development
 The repository's Git `pre-commit` hook script is the simplest way to configure, and build
