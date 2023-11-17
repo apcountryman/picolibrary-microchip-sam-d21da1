@@ -8,3 +8,4 @@
 1. [Interactive Tests](test-interactive.md)
 1. [Library Version](library_version.md)
 1. [Register Facilities](register.md)
+1. [Peripheral Facilities](peripheral.md)
