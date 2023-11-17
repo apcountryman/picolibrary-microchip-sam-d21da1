@@ -15,6 +15,16 @@ Peripheral register field constants are defined in the following member structur
 - `Mask`: field bit masks
 
 ## Peripheral Instances
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::Instance` template class is used
+to define Microchip SAM D21/DA1 peripheral instances.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::Instance` template class is
+defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/instance.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/instance.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/instance.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/instance.cc)
+header/source file pair.
+- To access a peripheral instance, use the
+  `::picolibrary::Microchip::SAM::D21DA1::Peripheral::Instance::instance()` static member
+  function.
+
 Microchip SAM D21/DA1 peripheral instances are defined in the
 [`include/picolibrary/microchip/sam/d21da1/peripheral.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral.cc)
 header/source file pair.
