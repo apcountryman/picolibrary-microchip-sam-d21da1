@@ -18,6 +18,6 @@ Register access is restricted to the following operations:
 - Bitwise XOR assignment
 
 ## Reserved Register
-The `::picolibrary::Microchip:SAM::D21DA1::Reserved_Register` class is used to declare a
+The `::picolibrary::Microchip::SAM::D21DA1::Reserved_Register` class is used to declare a
 Microchip SAM D21/DA1 reserved register.
 Reserved registers cannot be accessed.
