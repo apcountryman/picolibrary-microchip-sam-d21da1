@@ -16,7 +16,7 @@ Peripheral register field constants are defined in the following member structur
 
 ## Peripheral Instances
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::Instance` template class is used
-to define Microchip megaAVR 0-series peripheral instances.
+to define Microchip SAM D21/DA1 peripheral instances.
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::Instance` template class is
 defined in the
 [`include/picolibrary/microchip/sam/d21da1/peripheral/instance.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/instance.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/instance.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/instance.cc)
