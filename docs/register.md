@@ -5,13 +5,19 @@ header/source file pair.
 
 ## Table of Contents
 1. [Register](#register)
+1. [Reserved Register](#reserved-register)
 
 ## Register
 The `::picolibrary::Microchip::SAM::D21DA1::Register` class is used to declare a Microchip
-SAM D21/DA1 register.
+SAM D21/DA1 register that is not reserved.
 Register access is restricted to the following operations:
 - Conversion to the underlying register type (reading the register)
 - Assignment
 - Bitwise AND assignment
 - Bitwise OR assignment
 - Bitwise XOR assignment
+
+## Reserved Register
+The `::picolibrary::Microchip:SAM::D21DA1::Reserved_Register` class is used to declare a
+Microchip SAM D21/DA1 reserved register.
+Reserved registers cannot be accessed.

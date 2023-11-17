@@ -127,6 +127,40 @@ class Register {
     Type volatile m_register;
 };
 
+/**
+ * \brief A Microchip SAM D21/DA1 reserved register.
+ *
+ * \tparam T The reserved register's underlying integral type.
+ */
+template<typename T>
+class Reserved_Register {
+  public:
+    static_assert( std::is_integral_v<T> );
+
+    /**
+     * \brief The reserved register's underlying integral type.
+     */
+    using Type = T;
+
+    Reserved_Register() = delete;
+
+    Reserved_Register( Reserved_Register && ) = delete;
+
+    Reserved_Register( Reserved_Register const & ) = delete;
+
+    ~Reserved_Register() = delete;
+
+    auto operator=( Reserved_Register && ) = delete;
+
+    auto operator=( Reserved_Register const & ) = delete;
+
+  private:
+    /**
+     * \brief The reserved register.
+     */
+    Type volatile m_reserved_register;
+};
+
 } // namespace picolibrary::Microchip::SAM::D21DA1
 
 #endif // PICOLIBRARY_MICROCHIP_SAM_D21DA1_REGISTER_H
