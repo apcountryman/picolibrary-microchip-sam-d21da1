@@ -17,25 +17,7 @@
 
 /**
  * \file
- * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral interface.
+ * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSTICK implementation.
  */
 
-#ifndef PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
-#define PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
-
-#include "picolibrary/microchip/sam/d21da1/peripheral/instance.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/systick.h"
-
-/**
- * \brief Microchip SAM D21/DA1 peripheral facilities.
- */
-namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
-
-/**
- * \brief SYSTICK0.
- */
-using SYSTICK0 = Instance<SYSTICK, 0xE000E010>;
-
-} // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral
-
-#endif // PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
