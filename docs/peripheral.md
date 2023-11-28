@@ -2,6 +2,7 @@
 
 ## Table of Contents
 1. [Peripherals](#peripherals)
+    1. [SYSTICK](#systick)
 1. [Peripheral Instances](#peripheral-instances)
 
 ## Peripherals
@@ -13,6 +14,13 @@ Peripheral register field constants are defined in the following member structur
 - `Size`: field sizes
 - `Bit`: field bit positions
 - `Mask`: field bit masks
+
+### SYSTICK
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSTICK` class defines the layout
+of the Microchip SAM D21/DA1 SYSTICK peripheral and information about its registers.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSTICK` class is defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/systick.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/systick.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/systick.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/systick.cc)
+header/source file pair.
 
 ## Peripheral Instances
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::Instance` template class is used
@@ -33,6 +41,7 @@ Summary" table of the datasheet with the following change: a `0` is added to the
 the name of peripherals that only have a single instance to differentiate the peripheral
 name and the instance name.
 The following peripheral instances are defined (listed alphabetically):
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSTICK0`
 
 The availability of these Microchip SAM D21/DA1 peripheral instance definitions depends on
 the specific Microchip SAM D21/DA1 microcontroller used.
