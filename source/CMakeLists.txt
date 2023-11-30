@@ -26,6 +26,9 @@ set(
     "picolibrary/microchip/sam/d21da1.cc"
     "picolibrary/microchip/sam/d21da1/peripheral.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/instance.cc"
+    "picolibrary/microchip/sam/d21da1/peripheral/paca.cc"
+    "picolibrary/microchip/sam/d21da1/peripheral/pacb.cc"
+    "picolibrary/microchip/sam/d21da1/peripheral/pacc.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/systick.cc"
     "picolibrary/microchip/sam/d21da1/register.cc"
 )
