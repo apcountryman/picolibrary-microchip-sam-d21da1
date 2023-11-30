@@ -21,3 +21,9 @@
  */
 
 #include "picolibrary/microchip/sam/d21da1/peripheral/pacc.h"
+
+namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
+
+static_assert( sizeof( PACC ) == 0x04 + 4 );
+
+} // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral
