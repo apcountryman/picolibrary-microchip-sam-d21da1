@@ -60,7 +60,7 @@ class PACA {
             static constexpr auto WDT0      = std::uint_fast8_t{ 1 }; ///< WDT0.
             static constexpr auto RTC0      = std::uint_fast8_t{ 1 }; ///< RTC0.
             static constexpr auto EIC0      = std::uint_fast8_t{ 1 }; ///< EIC0.
-            static constexpr auto RESERVED7 = std::uint_fast8_t{ 1 }; ///< RESERVED7.
+            static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
         /**
@@ -130,7 +130,7 @@ class PACA {
             static constexpr auto WDT0      = std::uint_fast8_t{ 1 }; ///< WDT0.
             static constexpr auto RTC0      = std::uint_fast8_t{ 1 }; ///< RTC0.
             static constexpr auto EIC0      = std::uint_fast8_t{ 1 }; ///< EIC0.
-            static constexpr auto RESERVED7 = std::uint_fast8_t{ 1 }; ///< RESERVED7.
+            static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
         /**

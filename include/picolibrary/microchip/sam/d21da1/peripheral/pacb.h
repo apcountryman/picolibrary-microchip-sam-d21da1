@@ -60,7 +60,7 @@ class PACB {
             static constexpr auto DMAC0     = std::uint_fast8_t{ 1 }; ///< DMAC0.
             static constexpr auto USB0      = std::uint_fast8_t{ 1 }; ///< USB0.
             static constexpr auto MTB0      = std::uint_fast8_t{ 1 }; ///< MTB0.
-            static constexpr auto RESERVED7 = std::uint_fast8_t{ 1 }; ///< RESERVED7.
+            static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
         /**
@@ -130,7 +130,7 @@ class PACB {
             static constexpr auto DMAC0     = std::uint_fast8_t{ 1 }; ///< DMAC0.
             static constexpr auto USB0      = std::uint_fast8_t{ 1 }; ///< USB0.
             static constexpr auto MTB0      = std::uint_fast8_t{ 1 }; ///< MTB0.
-            static constexpr auto RESERVED7 = std::uint_fast8_t{ 1 }; ///< RESERVED7.
+            static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
         /**

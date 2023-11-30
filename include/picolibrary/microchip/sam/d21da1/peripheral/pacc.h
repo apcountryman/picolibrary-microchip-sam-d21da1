@@ -91,9 +91,9 @@ class PACC {
             static constexpr auto PTC0       = std::uint_fast8_t{ 1 }; ///< PTC0.
             static constexpr auto I2S0       = std::uint_fast8_t{ 1 }; ///< I2S0.
             static constexpr auto AC1        = std::uint_fast8_t{ 1 }; ///< AC1.
-            static constexpr auto RESERVED22 = std::uint_fast8_t{ 1 }; ///< RESERVED22.
+            static constexpr auto RESERVED22 = std::uint_fast8_t{ 2 }; ///< RESERVED22.
             static constexpr auto TCC3       = std::uint_fast8_t{ 1 }; ///< TCC3.
-            static constexpr auto RESERVED25 = std::uint_fast8_t{ 1 }; ///< RESERVED25.
+            static constexpr auto RESERVED25 = std::uint_fast8_t{ 7 }; ///< RESERVED25.
         };
 
         /**
@@ -228,9 +228,9 @@ class PACC {
             static constexpr auto PTC0       = std::uint_fast8_t{ 1 }; ///< PTC0.
             static constexpr auto I2S0       = std::uint_fast8_t{ 1 }; ///< I2S0.
             static constexpr auto AC1        = std::uint_fast8_t{ 1 }; ///< AC1.
-            static constexpr auto RESERVED22 = std::uint_fast8_t{ 1 }; ///< RESERVED22.
+            static constexpr auto RESERVED22 = std::uint_fast8_t{ 2 }; ///< RESERVED22.
             static constexpr auto TCC3       = std::uint_fast8_t{ 1 }; ///< TCC3.
-            static constexpr auto RESERVED25 = std::uint_fast8_t{ 1 }; ///< RESERVED25.
+            static constexpr auto RESERVED25 = std::uint_fast8_t{ 7 }; ///< RESERVED25.
         };
 
         /**
