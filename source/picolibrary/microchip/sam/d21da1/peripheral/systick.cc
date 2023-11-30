@@ -21,3 +21,9 @@
  */
 
 #include "picolibrary/microchip/sam/d21da1/peripheral/systick.h"
+
+namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
+
+static_assert( sizeof( SYSTICK ) == ( 0xE000E01C - 0xE000E010 ) + 4 );
+
+} // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral

@@ -21,3 +21,9 @@
  */
 
 #include "picolibrary/microchip/sam/d21da1/peripheral/paca.h"
+
+namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
+
+static_assert( sizeof( PACA ) == 0x04 + 4 );
+
+} // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral
