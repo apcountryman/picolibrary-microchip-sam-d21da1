@@ -53,13 +53,13 @@ class PACB {
          * \brief Field sizes.
          */
         struct Size {
-            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 }; ///< RESERVED0.
-            static constexpr auto DSU0      = std::uint_fast8_t{ 1 }; ///< DSU0.
-            static constexpr auto NVMCTRL0  = std::uint_fast8_t{ 1 }; ///< NVMCTRL0.
-            static constexpr auto PORT0     = std::uint_fast8_t{ 1 }; ///< PORT0.
-            static constexpr auto DMAC0     = std::uint_fast8_t{ 1 }; ///< DMAC0.
-            static constexpr auto USB0      = std::uint_fast8_t{ 1 }; ///< USB0.
-            static constexpr auto MTB0      = std::uint_fast8_t{ 1 }; ///< MTB0.
+            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 };  ///< RESERVED0.
+            static constexpr auto DSU0      = std::uint_fast8_t{ 1 };  ///< DSU0.
+            static constexpr auto NVMCTRL0  = std::uint_fast8_t{ 1 };  ///< NVMCTRL0.
+            static constexpr auto PORT0     = std::uint_fast8_t{ 1 };  ///< PORT0.
+            static constexpr auto DMAC0     = std::uint_fast8_t{ 1 };  ///< DMAC0.
+            static constexpr auto USB0      = std::uint_fast8_t{ 1 };  ///< USB0.
+            static constexpr auto MTB0      = std::uint_fast8_t{ 1 };  ///< MTB0.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
@@ -123,13 +123,13 @@ class PACB {
          * \brief Field sizes.
          */
         struct Size {
-            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 }; ///< RESERVED0.
-            static constexpr auto DSU0      = std::uint_fast8_t{ 1 }; ///< DSU0.
-            static constexpr auto NVMCTRL0  = std::uint_fast8_t{ 1 }; ///< NVMCTRL0.
-            static constexpr auto PORT0     = std::uint_fast8_t{ 1 }; ///< PORT0.
-            static constexpr auto DMAC0     = std::uint_fast8_t{ 1 }; ///< DMAC0.
-            static constexpr auto USB0      = std::uint_fast8_t{ 1 }; ///< USB0.
-            static constexpr auto MTB0      = std::uint_fast8_t{ 1 }; ///< MTB0.
+            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 };  ///< RESERVED0.
+            static constexpr auto DSU0      = std::uint_fast8_t{ 1 };  ///< DSU0.
+            static constexpr auto NVMCTRL0  = std::uint_fast8_t{ 1 };  ///< NVMCTRL0.
+            static constexpr auto PORT0     = std::uint_fast8_t{ 1 };  ///< PORT0.
+            static constexpr auto DMAC0     = std::uint_fast8_t{ 1 };  ///< DMAC0.
+            static constexpr auto USB0      = std::uint_fast8_t{ 1 };  ///< USB0.
+            static constexpr auto MTB0      = std::uint_fast8_t{ 1 };  ///< MTB0.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 

@@ -53,13 +53,13 @@ class PACA {
          * \brief Field sizes.
          */
         struct Size {
-            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 }; ///< RESERVED0.
-            static constexpr auto PM0       = std::uint_fast8_t{ 1 }; ///< PM0.
-            static constexpr auto SYSCTRL0  = std::uint_fast8_t{ 1 }; ///< SYSCTRL0.
-            static constexpr auto GCLK0     = std::uint_fast8_t{ 1 }; ///< GCLK0.
-            static constexpr auto WDT0      = std::uint_fast8_t{ 1 }; ///< WDT0.
-            static constexpr auto RTC0      = std::uint_fast8_t{ 1 }; ///< RTC0.
-            static constexpr auto EIC0      = std::uint_fast8_t{ 1 }; ///< EIC0.
+            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 };  ///< RESERVED0.
+            static constexpr auto PM0       = std::uint_fast8_t{ 1 };  ///< PM0.
+            static constexpr auto SYSCTRL0  = std::uint_fast8_t{ 1 };  ///< SYSCTRL0.
+            static constexpr auto GCLK0     = std::uint_fast8_t{ 1 };  ///< GCLK0.
+            static constexpr auto WDT0      = std::uint_fast8_t{ 1 };  ///< WDT0.
+            static constexpr auto RTC0      = std::uint_fast8_t{ 1 };  ///< RTC0.
+            static constexpr auto EIC0      = std::uint_fast8_t{ 1 };  ///< EIC0.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
@@ -123,13 +123,13 @@ class PACA {
          * \brief Field sizes.
          */
         struct Size {
-            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 }; ///< RESERVED0.
-            static constexpr auto PM0       = std::uint_fast8_t{ 1 }; ///< PM0.
-            static constexpr auto SYSCTRL0  = std::uint_fast8_t{ 1 }; ///< SYSCTRL0.
-            static constexpr auto GCLK0     = std::uint_fast8_t{ 1 }; ///< GCLK0.
-            static constexpr auto WDT0      = std::uint_fast8_t{ 1 }; ///< WDT0.
-            static constexpr auto RTC0      = std::uint_fast8_t{ 1 }; ///< RTC0.
-            static constexpr auto EIC0      = std::uint_fast8_t{ 1 }; ///< EIC0.
+            static constexpr auto RESERVED0 = std::uint_fast8_t{ 1 };  ///< RESERVED0.
+            static constexpr auto PM0       = std::uint_fast8_t{ 1 };  ///< PM0.
+            static constexpr auto SYSCTRL0  = std::uint_fast8_t{ 1 };  ///< SYSCTRL0.
+            static constexpr auto GCLK0     = std::uint_fast8_t{ 1 };  ///< GCLK0.
+            static constexpr auto WDT0      = std::uint_fast8_t{ 1 };  ///< WDT0.
+            static constexpr auto RTC0      = std::uint_fast8_t{ 1 };  ///< RTC0.
+            static constexpr auto EIC0      = std::uint_fast8_t{ 1 };  ///< EIC0.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
