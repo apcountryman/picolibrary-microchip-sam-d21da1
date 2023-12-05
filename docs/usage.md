@@ -35,13 +35,6 @@ target_link_libraries(
 picolibrary-microchip-sam-d21da1 supports the following project configuration options:
 - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING` (defaults to `OFF`):
   enable interactive testing
-- `PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS` (defaults to `ON`):
-  use parent project's build flags
-- The following project configuration options are available if
-  `PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING` is `ON` and
-  `PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_BUILD_FLAGS` is `OFF`:
-    - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_TESTING_INTERACTIVE_LINKER_SCRIPT`: interactive
-      testing linker script
 - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY` (defaults to `ON`):
   use parent project's picolibrary
 
