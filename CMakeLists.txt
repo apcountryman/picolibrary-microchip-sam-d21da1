@@ -80,6 +80,29 @@ if( "${PROJECT_SOURCE_DIR}" STREQUAL "${CMAKE_SOURCE_DIR}" )
     endif( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
 endif( "${PROJECT_SOURCE_DIR}" STREQUAL "${CMAKE_SOURCE_DIR}" )
 
+# configure picolibrary
+option(
+    PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY
+    "picolibrary-microchip-sam-d21da1: use parent project's picolibrary"
+    ON
+)
+if( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY} )
+    set( PICOLIBRARY_HIL_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include" CACHE INTERNAL "" )
+
+    set( PICOLIBRARY_ENABLE_AUTOMATED_TESTING OFF CACHE INTERNAL "" )
+
+    set( PICOLIBRARY_ENABLE_INTERACTIVE_TESTING "${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING}" CACHE INTERNAL "" )
+
+    add_subdirectory( picolibrary )
+endif( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY} )
+
+# capture project version information
+include( git-utilities )
+execute_git_command(
+    PICOLIBRARY_MICROCHIP_SAM_D21DA1_VERSION
+    COMMAND describe --match=none --always --dirty --broken
+)
+
 # configure OpenOCD
 if( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
     include( openocd-utilities )
@@ -105,29 +128,6 @@ if( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
         "picolibrary-microchip-sam-d21da1: OpenOCD commands to execute on server startup"
     )
 endif( ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING} )
-
-# configure picolibrary
-option(
-    PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY
-    "picolibrary-microchip-sam-d21da1: use parent project's picolibrary"
-    ON
-)
-if( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY} )
-    set( PICOLIBRARY_HIL_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include" CACHE INTERNAL "" )
-
-    set( PICOLIBRARY_ENABLE_AUTOMATED_TESTING OFF CACHE INTERNAL "" )
-
-    set( PICOLIBRARY_ENABLE_INTERACTIVE_TESTING "${PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING}" CACHE INTERNAL "" )
-
-    add_subdirectory( picolibrary )
-endif( NOT ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY} )
-
-# capture project version information
-include( git-utilities )
-execute_git_command(
-    PICOLIBRARY_MICROCHIP_SAM_D21DA1_VERSION
-    COMMAND describe --match=none --always --dirty --broken
-)
 
 # library
 add_subdirectory( source )
