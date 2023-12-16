@@ -20,7 +20,7 @@
 set( CMAKE_BUILD_TYPE              "MinSizeRel" CACHE INTERNAL "" )
 set( CMAKE_EXPORT_COMPILE_COMMANDS ON           CACHE INTERNAL "" )
 
-# picolibrary aand picolibrary-arm-cortex-m0plus configuration
+# picolibrary and picolibrary-arm-cortex-m0plus configuration
 set( PICOLIBRARY_MICROCHIP_SAM_D21DA1_USE_PARENT_PROJECT_PICOLIBRARY_ARM_CORTEX_M0PLUS OFF CACHE INTERNAL "" )
 set( PICOLIBRARY_SUPPRESS_ASSERTION_FAILURE_LOCATION_INFORMATION                       OFF CACHE INTERNAL "" )
 set( PICOLIBRARY_SUPPRESS_HUMAN_READABLE_ERROR_INFORMATION                             OFF CACHE INTERNAL "" )
