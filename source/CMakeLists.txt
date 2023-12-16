@@ -35,6 +35,7 @@ set(
 set(
     PICOLIBRARY_MICROCHIP_SAM_D21DA1_LINK_LIBRARIES
     "picolibrary"
+    "picolibrary-arm-cortex-m0plus"
 )
 
 add_library(
