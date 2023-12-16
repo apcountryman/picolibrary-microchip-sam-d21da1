@@ -25,10 +25,10 @@
 	path = cmake/modules/apcountryman-cmake-utilities
 	url = ../cmake-utilities
 
-# picolibrary
-[submodule "picolibrary"]
-	path = picolibrary
-	url = ../picolibrary
+# picolibrary-arm-cortex-m0plus
+[submodule "picolibrary-arm-cortex-m0plus"]
+	path = picolibrary-arm-cortex-m0plus
+	url = ../picolibrary-arm-cortex-m0plus
 
 # lizard
 [submodule "lizard"]
