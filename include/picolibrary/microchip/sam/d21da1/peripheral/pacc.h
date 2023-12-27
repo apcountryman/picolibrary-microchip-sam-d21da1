@@ -26,7 +26,7 @@
 #include <cstdint>
 
 #include "picolibrary/bit_manipulation.h"
-#include "picolibrary/microchip/sam/d21da1/register.h"
+#include "picolibrary/register.h"
 
 namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
 
