@@ -17,13 +17,46 @@
 
 /**
  * \file
- * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral::PACC implementation.
+ * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC interface.
  */
 
-#include "picolibrary/microchip/sam/d21da1/peripheral/pacc.h"
+#ifndef PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_PAC_H
+#define PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_PAC_H
+
+#include <cstdint>
+
+#include "picolibrary/register.h"
 
 namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
 
-static_assert( sizeof( PACC ) == 0x04 + 4 );
+/**
+ * \brief Microchip SAM D21/DA1 Peripheral Access Controller (PAC) peripheral.
+ */
+class PAC {
+  public:
+    /**
+     * \brief Write Protect Clear (WPCLR) register.
+     */
+    Register<std::uint32_t> wpclr;
+
+    /**
+     * \brief Write Protect Set (WPSET) register.
+     */
+    Register<std::uint32_t> wpset;
+
+    PAC() = delete;
+
+    PAC( PAC && ) = delete;
+
+    PAC( PAC const & ) = delete;
+
+    ~PAC() = delete;
+
+    auto operator=( PAC && ) = delete;
+
+    auto operator=( PAC const & ) = delete;
+};
 
 } // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral
+
+#endif // PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_PAC_H
