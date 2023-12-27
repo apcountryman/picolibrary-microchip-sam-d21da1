@@ -17,13 +17,13 @@
 
 /**
  * \file
- * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral::PACB implementation.
+ * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC implementation.
  */
 
-#include "picolibrary/microchip/sam/d21da1/peripheral/pacb.h"
+#include "picolibrary/microchip/sam/d21da1/peripheral/pac.h"
 
 namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
 
-static_assert( sizeof( PACB ) == 0x04 + 4 );
+static_assert( sizeof( PAC ) == 0x04 + 4 );
 
 } // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral

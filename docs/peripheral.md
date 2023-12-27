@@ -16,29 +16,10 @@ Peripheral register field constants are defined in the following member structur
 - `Mask`: field bit masks
 
 ### PAC
-The layout and register information for the Microchip SAM D21/DA1 PAC peripheral is not
-defined by a single class due to each Microchip SAM D21/DA1 PAC peripheral instance having
-different register fields.
-
-The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACA` class defines the layout of
-the Microchip SAM D21/DA1 AHB-APB Bridge A PAC peripheral and information about its
-registers.
-The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACA` class is defined in the
-[`include/picolibrary/microchip/sam/d21da1/peripheral/paca.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/paca.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/paca.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/paca.cc)
-header/source file pair.
-
-The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACB` class defines the layout of
-the Microchip SAM D21/DA1 AHB-APB Bridge B PAC peripheral and information about its
-registers.
-The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACB` class is defined in the
-[`include/picolibrary/microchip/sam/d21da1/peripheral/pacb.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/pacb.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/pacb.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/pacb.cc)
-header/source file pair.
-
-The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACC` class defines the layout of
-the Microchip SAM D21/DA1 AHB-APB Bridge C PAC peripheral and information about its
-registers.
-The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACC` class is defined in the
-[`include/picolibrary/microchip/sam/d21da1/peripheral/pacc.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/pacc.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/pacc.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/pacc.cc)
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC` class defines the layout of
+the Microchip SAM D21/DA1 PAC peripheral.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC` class is defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/pac.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/pac.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/pac.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/pac.cc)
 header/source file pair.
 
 ## Peripheral Instances
@@ -50,9 +31,9 @@ Summary" table of the datasheet with the following change: a `0` is added to the
 the name of peripherals that only have a single instance to differentiate the peripheral
 name and the instance name.
 The following peripheral instances are defined (listed alphabetically):
-- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACA0`
-- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACB0`
-- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PACC0`
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC0`
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC1`
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC2`
 
 The availability of these Microchip SAM D21/DA1 peripheral instance definitions depends on
 the specific Microchip SAM D21/DA1 microcontroller used.
