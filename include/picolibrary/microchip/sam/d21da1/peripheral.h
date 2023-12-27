@@ -23,10 +23,10 @@
 #ifndef PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
 #define PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
 
-#include "picolibrary/microchip/sam/d21da1/peripheral/instance.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/paca.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/pacb.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/pacc.h"
+#include "picolibrary/peripheral.h"
 
 /**
  * \brief Microchip SAM D21/DA1 peripheral facilities.
@@ -36,17 +36,17 @@ namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
 /**
  * \brief PACA0.
  */
-using PACA0 = Instance<PACA, 0x40000000>;
+using PACA0 = ::picolibrary::Peripheral::Instance<PACA, 0x40000000>;
 
 /**
  * \brief PACB0.
  */
-using PACB0 = Instance<PACB, 0x41000000>;
+using PACB0 = ::picolibrary::Peripheral::Instance<PACB, 0x41000000>;
 
 /**
  * \brief PACC0.
  */
-using PACC0 = Instance<PACC, 0x42000000>;
+using PACC0 = ::picolibrary::Peripheral::Instance<PACC, 0x42000000>;
 
 } // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral
 
