@@ -8,13 +8,24 @@
 
 ## Peripherals
 The layout of each Microchip SAM D21/DA1 peripheral's registers is defined by the class
-named after the peripheral.
-Peripheral registers are accessed via the member variables named after the registers.
-Peripheral register information is defined in member classes named after the registers.
+named after the peripheral (e.g. the layout of the NVMCTRL peripheral's registers is
+defined by the `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL` class).
+Peripheral registers are accessed via the member variables named after the registers (e.g.
+the NVMCTRL peripheral's CTRLA register is accessed via the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL::ctrla` member variable).
+Peripheral register information is defined in member classes named after the registers
+(e.g. NVMCTRL peripheral CTRLA register information is defined in the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL::CTRLA` member class).
 Peripheral register field constants are defined in the following member structures:
-- `Size`: field sizes
-- `Bit`: field bit positions
-- `Mask`: field bit masks
+- `Size`: field sizes (e.g. the size of the CMD field of the NVMCTRL peripheral's CTRLA
+  register is defined by the
+  `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL::CTRLA::Size::CMD` constant)
+- `Bit`: field bit positions (e.g. the position of the CMD field of the NVMCTRL
+  peripheral's CTRLA register is defined by the
+  `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL::CTRLA::Bit::CMD` constant)
+- `Mask`: field bit masks (e.g. the mask for the CMD field of the NVMCTRL peripheral's
+  CTRLA register is defined by the
+  `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL::CTRLA::Mask::CMD` constant)
 
 ### NVMCTRL
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL` class defines the layout
