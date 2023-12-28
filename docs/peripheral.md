@@ -2,6 +2,7 @@
 
 ## Table of Contents
 1. [Peripherals](#peripherals)
+    1. [NVMCTRL](#nvmctrl)
     1. [PAC](#pac)
 1. [Peripheral Instances](#peripheral-instances)
 
@@ -14,6 +15,13 @@ Peripheral register field constants are defined in the following member structur
 - `Size`: field sizes
 - `Bit`: field bit positions
 - `Mask`: field bit masks
+
+### NVMCTRL
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL` class defines the layout
+of the Microchip SAM D21/DA1 NVMCTRL peripheral and information about its registers.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL` class is defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.cc)
+header/source file pair.
 
 ### PAC
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC` class defines the layout of
@@ -31,6 +39,7 @@ Summary" table of the datasheet with the following change: a `0` is added to the
 the name of peripherals that only have a single instance to differentiate the peripheral
 name and the instance name.
 The following peripheral instances are defined (listed alphabetically):
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC1`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC2`

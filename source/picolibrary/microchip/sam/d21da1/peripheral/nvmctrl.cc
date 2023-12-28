@@ -17,41 +17,13 @@
 
 /**
  * \file
- * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral interface.
+ * \brief picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL implementation.
  */
-
-#ifndef PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
-#define PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
 
 #include "picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.h"
-#include "picolibrary/microchip/sam/d21da1/peripheral/pac.h"
-#include "picolibrary/peripheral.h"
 
-/**
- * \brief Microchip SAM D21/DA1 peripheral facilities.
- */
 namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
 
-/**
- * \brief PAC0.
- */
-using PAC0 = ::picolibrary::Peripheral::Instance<PAC, 0x40000000>;
-
-/**
- * \brief PAC1.
- */
-using PAC1 = ::picolibrary::Peripheral::Instance<PAC, 0x41000000>;
-
-/**
- * \brief NVMCTRL0.
- */
-using NVMCTRL0 = ::picolibrary::Peripheral::Instance<NVMCTRL, 0x41004000>;
-
-/**
- * \brief PAC2.
- */
-using PAC2 = ::picolibrary::Peripheral::Instance<PAC, 0x42000000>;
+static_assert( sizeof( NVMCTRL ) == 0x20 + 2 );
 
 } // namespace picolibrary::Microchip::SAM::D21DA1::Peripheral
-
-#endif // PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
