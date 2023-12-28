@@ -75,21 +75,95 @@ class NVMCTRL {
          * \brief CMD.
          */
         enum CMD : std::uint16_t {
-            CMD_ER      = 0x02 << Bit::CMD, ///< Erase Row.
-            CMD_WP      = 0x04 << Bit::CMD, ///< Write Page.
-            CMD_EAR     = 0x05 << Bit::CMD, ///< Erase Auxiliary Row.
-            CMD_WAP     = 0x06 << Bit::CMD, ///< Write Auxiliary Page.
-            CMD_RWWEEER = 0x1A << Bit::CMD, ///< RWWEE Erase Row.
-            CMD_RWWEEWP = 0x1C << Bit::CMD, ///< RWWEE Write Page.
-            CMD_LR      = 0x40 << Bit::CMD, ///< Lock Region.
-            CMD_UR      = 0x41 << Bit::CMD, ///< Unlock Region.
-            CMD_SPRM    = 0x42 << Bit::CMD, ///< Set Power Reduction Mode.
-            CMD_CPRM    = 0x43 << Bit::CMD, ///< Clear Power Reduction Mode.
-            CMD_PBC     = 0x44 << Bit::CMD, ///< Page Buffer Clear.
-            CMD_SSB     = 0x45 << Bit::CMD, ///< Set Security Bit.
-            CMD_INVALL  = 0x46 << Bit::CMD, ///< Invalidate all cache lines.
-            CMD_LDR     = 0x47 << Bit::CMD, ///< Lock Data Region.
-            CMD_UDR     = 0x48 << Bit::CMD, ///< Unlock Data Region.
+            /**
+             * Erase Row - Erases the row addressed by the ADDR register in the NVM main
+             * array.
+             */
+            CMD_ER = 0x02 << Bit::CMD,
+
+            /**
+             * Write Page - Writes the contents of the page buffer to the page addressed
+             * by the ADDR register.
+             */
+            CMD_WP = 0x04 << Bit::CMD,
+
+            /**
+             * Erase Auxiliary Row - Erases the auxiliary row addressed by the ADDR
+             * register. This command can be given only when the Security bit is not set
+             * and only to the User Configuration Row.
+             */
+            CMD_EAR = 0x05 << Bit::CMD,
+
+            /**
+             * Write Auxiliary Page - Writes the contents of the page buffer to the page
+             * addressed by the ADDR register. This command can be given only when the
+             * Security bit is not set and only to the User Configuration Row.
+             */
+            CMD_WAP = 0x06 << Bit::CMD,
+
+            /**
+             * RWWEE Erase Row - Erases the row addressed by the ADDR register in the
+             * RWWEE array.
+             */
+            CMD_RWWEEER = 0x1A << Bit::CMD,
+
+            /**
+             * RWWEE Write Page - Writes the contents of the page buffer to the page
+             * addressed by the ADDR register in the RWWEE array.
+             */
+            CMD_RWWEEWP = 0x1C << Bit::CMD,
+
+            /**
+             * Lock Region - Locks the region containing the address location in the ADDR
+             * register.
+             */
+            CMD_LR = 0x40 << Bit::CMD,
+
+            /**
+             * Unlock Region - Unlocks the region containing the address location in the
+             * ADDR register.
+             */
+            CMD_UR = 0x41 << Bit::CMD,
+
+            /**
+             * Sets the Power Reduction mode.
+             */
+            CMD_SPRM = 0x42 << Bit::CMD,
+
+            /**
+             * Clears the Power Reduction mode.
+             */
+            CMD_CPRM = 0x43 << Bit::CMD,
+
+            /**
+             * Page Buffer Clear - Clears the page buffer.
+             */
+            CMD_PBC = 0x44 << Bit::CMD,
+
+            /**
+             * Set Security Bit - Sets the Security bit by writing 0x00 to the first byte
+             * in the lockbit row.
+             */
+            CMD_SSB = 0x45 << Bit::CMD,
+
+            /**
+             * Invalidates all cache lines.
+             */
+            CMD_INVALL = 0x46 << Bit::CMD,
+
+            /**
+             * Lock Data Region - Locks the data region containing the address location in
+             * the ADDR register. When the security extension is enabled, only secure
+             * access can lock secure regions.
+             */
+            CMD_LDR = 0x47 << Bit::CMD,
+
+            /**
+             * Unlock Data Region - Unlocks the data region containing the address
+             * location in the ADDR register. When the security extension is enabled, only
+             * secure access can unlock secure regions.
+             */
+            CMD_UDR = 0x48 << Bit::CMD,
         };
 
         CTRLA() = delete;
@@ -168,24 +242,49 @@ class NVMCTRL {
          * \brief SLEEPPRM.
          */
         enum SLEEPPRM : std::uint32_t {
-            SLEEPPRM_WAKEUPACCESS  = 0x0 << Bit::SLEEPPRM, ///< NVM block enters low-power mode when entering sleep. NVM block exits low-power mode upon first access.
-            SLEEPPRM_WAKEUPINSTANT = 0x1 << Bit::SLEEPPRM, ///< NVM block enters low-power mode when entering sleep. NVM block exits low-power mode when exiting sleep.
-            SLEEPPRM_DISABLED = 0x3 << Bit::SLEEPPRM, ///< Auto power reduction disabled.
+            /**
+             * NVM block enters low-power mode when entering sleep. NVM block exits
+             * low-power mode upon first access.
+             */
+            SLEEPPRM_WAKEUPACCESS = 0x0 << Bit::SLEEPPRM,
+
+            /**
+             * NVM block enters low-power mode when entering sleep. NVM block exits
+             * low-power mode when exiting sleep.
+             */
+            SLEEPPRM_WAKEUPINSTANT = 0x1 << Bit::SLEEPPRM,
+
+            /**
+             * Auto power reduction disabled.
+             */
+            SLEEPPRM_DISABLED = 0x3 << Bit::SLEEPPRM,
         };
 
         /**
          * \brief READMODE.
          */
         enum READMODE : std::uint32_t {
-            READMODE_NO_MISS_PENALTY = 0x0 << Bit::READMODE, ///< The NVM Controller (cache system) does not insert wait states on a cache miss. Gives the best system performance.
-            READMODE_LOW_POWER       = 0x1 << Bit::READMODE, ///< Reduces power consumption of the cache system,
-                                                       ///< but inserts a wait state each time there is a
-                                                       ///< cache miss. This mode may not
-                                                       ///< be relevant if CPU performance is required, as the application will be stalled and may lead to increased run time.
-            READMODE_DETERMINISTIC =
-                0x2 << Bit::READMODE, ///< The cache system ensures that a cache hit or miss
-                                      ///< takes the same amount of time, determined by the
-                                      ///< number of programmed Flash wait states. This mode can be used for real-time applications that require deterministic execution timings.
+            /**
+             * The NVM Controller (cache system) does not insert wait states on a cache
+             * miss. Gives the best system performance.
+             */
+            READMODE_NO_MISS_PENALTY = 0x0 << Bit::READMODE,
+
+            /**
+             * Reduces power consumption of the cache system, but inserts a wait state
+             * each time there is a cache miss. This mode may not be relevant if CPU
+             * performance is required, as the application will be stalled and may lead to
+             * increased run time.
+             */
+            READMODE_LOW_POWER = 0x1 << Bit::READMODE,
+
+            /**
+             * The cache system ensures that a cache hit or miss takes the same amount of
+             * time, determined by the number of programmed Flash wait states. This mode
+             * can be used for real-time applications that require deterministic execution
+             * timings.
+             */
+            READMODE_DETERMINISTIC = 0x2 << Bit::READMODE,
         };
 
         CTRLB() = delete;
