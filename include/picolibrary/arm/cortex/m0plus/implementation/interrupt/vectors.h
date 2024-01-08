@@ -21,49 +21,49 @@
  */
 
 /**
- * \brief PM handler.
+ * \brief PM0 handler.
  */
-Handler pm_handler;
+Handler pm0_handler;
 
 /**
- * \brief SYSCTRL handler.
+ * \brief SYSCTRL0 handler.
  */
-Handler sysctrl_handler;
+Handler sysctrl0_handler;
 
 /**
- * \brief WDT handler.
+ * \brief WDT0 handler.
  */
-Handler wdt_handler;
+Handler wdt0_handler;
 
 /**
- * \brief RTC handler.
+ * \brief RTC0 handler.
  */
-Handler rtc_handler;
+Handler rtc0_handler;
 
 /**
- * \brief EIC handler.
+ * \brief EIC0 handler.
  */
-Handler eic_handler;
+Handler eic0_handler;
 
 /**
- * \brief NVMCTRL handler.
+ * \brief NVMCTRL0 handler.
  */
-Handler nvmctrl_handler;
+Handler nvmctrl0_handler;
 
 /**
- * \brief DMAC handler.
+ * \brief DMAC0 handler.
  */
-Handler dmac_handler;
+Handler dmac0_handler;
 
 /**
- * \brief USB handler.
+ * \brief USB0 handler.
  */
-Handler usb_handler;
+Handler usb0_handler;
 
 /**
- * \brief EVSYS handler.
+ * \brief EVSYS0 handler.
  */
-Handler evsys_handler;
+Handler evsys0_handler;
 
 /**
  * \brief SERCOM0 handler.
@@ -136,29 +136,29 @@ Handler tc6_handler;
 Handler tc7_handler;
 
 /**
- * \brief ADC handler.
+ * \brief ADC0 handler.
  */
-Handler adc_handler;
+Handler adc0_handler;
 
 /**
- * \brief AC handler.
+ * \brief AC0 handler.
  */
-Handler ac_handler;
+Handler ac0_handler;
 
 /**
- * \brief DAC handler.
+ * \brief DAC0 handler.
  */
-Handler dac_handler;
+Handler dac0_handler;
 
 /**
- * \brief PTC handler.
+ * \brief PTC0 handler.
  */
-Handler ptc_handler;
+Handler ptc0_handler;
 
 /**
- * \brief I2S handler.
+ * \brief I2S0 handler.
  */
-Handler i2s_handler;
+Handler i2s0_handler;
 
 /**
  * \brief AC1 handler.
