@@ -1,7 +1,7 @@
 /*
  * picolibrary-microchip-sam-d21da1
  *
- * Copyright 2023, Andrew Countryman <apcountryman@gmail.com> and the
+ * Copyright 2023-2024, Andrew Countryman <apcountryman@gmail.com> and the
  * picolibrary-microchip-sam-d21da1 contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
