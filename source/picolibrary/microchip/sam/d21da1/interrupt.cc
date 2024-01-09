@@ -42,6 +42,8 @@ int main();
 
 extern "C" void picolibrary_microchip_sam_d21da1_interrupt_handle_reset_default() noexcept
 {
+    // #lizard forgives the length
+
     {
         auto const *       data_flash_start = &_data_flash_start;
         auto *             data_start       = &_data_start;
