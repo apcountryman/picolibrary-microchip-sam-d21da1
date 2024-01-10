@@ -4,6 +4,7 @@
 1. [Peripherals](#peripherals)
     1. [NVMCTRL](#nvmctrl)
     1. [PAC](#pac)
+    1. [SYSCTRL](#sysctrl)
 1. [Peripheral Instances](#peripheral-instances)
 
 ## Peripherals
@@ -41,6 +42,13 @@ The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC` class is defined in
 [`include/picolibrary/microchip/sam/d21da1/peripheral/pac.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/pac.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/pac.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/pac.cc)
 header/source file pair.
 
+### SYSCTRL
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSCTRL` class defines the layout
+of the Microchip SAM D21/DA1 SYSCTRL peripheral and information about its registers.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSCTRL` class is defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/sysctrl.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/sysctrl.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/sysctrl.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/sysctrl.cc)
+header/source file pair.
+
 ## Peripheral Instances
 Microchip SAM D21/DA1 peripheral instances are defined in the
 [`include/picolibrary/microchip/sam/d21da1/peripheral.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral.cc)
@@ -54,6 +62,7 @@ The following peripheral instances are defined (listed alphabetically):
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC1`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC2`
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSCTRL0`
 
 The availability of these Microchip SAM D21/DA1 peripheral instance definitions depends on
 the specific Microchip SAM D21/DA1 microcontroller used.
