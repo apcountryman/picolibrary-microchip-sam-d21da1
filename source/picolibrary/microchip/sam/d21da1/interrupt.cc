@@ -78,25 +78,20 @@ extern "C" void picolibrary_microchip_sam_d21da1_interrupt_handle_reset_default(
     for ( ;; ) {} // for
 }
 
-#define HANDLE_RESET_DEFAULT_ALIAS \
-    __attribute__(                 \
-        ( alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_reset_default" ) ) )
-
-#define HANDLE_RESET_DEFAULT_WEAK_ALIAS \
-    __attribute__( ( weak, alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_reset_default" ) ) )
+// clang-format off
+#define HANDLE_RESET_DEFAULT_ALIAS      __attribute__( (       alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_reset_default" ) ) )
+#define HANDLE_RESET_DEFAULT_WEAK_ALIAS __attribute__( ( weak, alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_reset_default" ) ) )
+// clang-format on
 
 extern "C" void picolibrary_microchip_sam_d21da1_interrupt_handle_interrupt_default() noexcept
 {
     for ( ;; ) {} // for
 }
 
-#define HANDLE_INTERRUPT_DEFAULT_ALIAS                                          \
-    __attribute__(                                                              \
-        ( alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_interrupt_" \
-                 "default" ) ) )
-
-#define HANDLE_INTERRUPT_DEFAULT_WEAK_ALIAS \
-    __attribute__( ( weak, alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_interrupt_default" ) ) )
+// clang-format off
+#define HANDLE_INTERRUPT_DEFAULT_ALIAS      __attribute__( (       alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_interrupt_default" ) ) )
+#define HANDLE_INTERRUPT_DEFAULT_WEAK_ALIAS __attribute__( ( weak, alias( "picolibrary_microchip_sam_d21da1_interrupt_handle_interrupt_default" ) ) )
+// clang-format on
 
 namespace picolibrary::Microchip::SAM::D21DA1::Interrupt {
 

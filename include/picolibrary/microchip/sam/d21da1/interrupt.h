@@ -379,9 +379,9 @@ void handle_ptc0() noexcept;
 void handle_i2s0() noexcept;
 
 /**
- * \brief Handle AC10.
+ * \brief Handle AC1.
  *
- * \attention The default vector table's AC10 handler entry points to this function. It is
+ * \attention The default vector table's AC1 handler entry points to this function. It is
  *            defined as a weak alias for
  *            picolibrary::Microchip::SAM::D21DA1::Interrupt::handle_interrupt_default()
  *            so that its behavior can be overridden.
@@ -389,10 +389,10 @@ void handle_i2s0() noexcept;
 void handle_ac1() noexcept;
 
 /**
- * \brief Handle TCC30.
+ * \brief Handle TCC3.
  *
- * \attention The default vector table's TCC30 handler entry points to this function. It
- *            is defined as a weak alias for
+ * \attention The default vector table's TCC3 handler entry points to this function. It is
+ *            defined as a weak alias for
  *            picolibrary::Microchip::SAM::D21DA1::Interrupt::handle_interrupt_default()
  *            so that its behavior can be overridden.
  */
