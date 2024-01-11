@@ -1255,7 +1255,7 @@ class SYSCTRL {
      * This register has the following fields:
      * - Temperature Sensor Enable (TSEN)
      * - Bandgap Output Enable (BGOUTEN)
-     * - Bandgap Voltage Generator calibration (CALIB)
+     * - Bandgap Voltage Generator Calibration (CALIB)
      */
     class VREF : public Register<std::uint32_t> {
       public:
