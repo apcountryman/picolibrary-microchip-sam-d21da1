@@ -2,6 +2,7 @@
 
 ## Table of Contents
 1. [Peripherals](#peripherals)
+    1. [GCLK](#gclk)
     1. [NVMCTRL](#nvmctrl)
     1. [PAC](#pac)
     1. [SYSCTRL](#sysctrl)
@@ -27,6 +28,13 @@ Peripheral register field constants are defined in the following member structur
 - `Mask`: field bit masks (e.g. the mask for the CMD field of the NVMCTRL peripheral's
   CTRLA register is defined by the
   `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL::CTRLA::Mask::CMD` constant)
+
+### GCLK
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::GCLK` class defines the layout of
+the Microchip SAM D21/DA1 GCLK peripheral and information about its registers.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::GCLK` class is defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/gclk.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/gclk.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/gclk.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/gclk.cc)
+header/source file pair.
 
 ### NVMCTRL
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL` class defines the layout
@@ -58,6 +66,7 @@ Summary" table of the datasheet with the following change: a `0` is added to the
 the name of peripherals that only have a single instance to differentiate the peripheral
 name and the instance name.
 The following peripheral instances are defined (listed alphabetically):
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::GCLK0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::NVMCTRL0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC1`

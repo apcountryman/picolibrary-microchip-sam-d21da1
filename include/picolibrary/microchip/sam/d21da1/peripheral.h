@@ -23,6 +23,7 @@
 #ifndef PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
 #define PICOLIBRARY_MICROCHIP_SAM_D21DA1_PERIPHERAL_H
 
+#include "picolibrary/microchip/sam/d21da1/peripheral/gclk.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/pac.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/sysctrl.h"
@@ -42,6 +43,11 @@ using PAC0 = ::picolibrary::Peripheral::Instance<PAC, 0x40000000>;
  * \brief SYSCTRL0.
  */
 using SYSCTRL0 = ::picolibrary::Peripheral::Instance<SYSCTRL, 0x40000800>;
+
+/**
+ * \brief GCLK0.
+ */
+using GCLK0 = ::picolibrary::Peripheral::Instance<GCLK, 0x40000C00>;
 
 /**
  * \brief PAC1.
