@@ -26,6 +26,7 @@ set(
     "picolibrary/microchip/sam/d21da1.cc"
     "picolibrary/microchip/sam/d21da1/interrupt.cc"
     "picolibrary/microchip/sam/d21da1/peripheral.cc"
+    "picolibrary/microchip/sam/d21da1/peripheral/gclk.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/pac.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/sysctrl.cc"
