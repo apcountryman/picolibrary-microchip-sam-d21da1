@@ -5,6 +5,7 @@
     1. [GCLK](#gclk)
     1. [NVMCTRL](#nvmctrl)
     1. [PAC](#pac)
+    1. [PM](#pm)
     1. [SYSCTRL](#sysctrl)
 1. [Peripheral Instances](#peripheral-instances)
 
@@ -50,6 +51,13 @@ The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC` class is defined in
 [`include/picolibrary/microchip/sam/d21da1/peripheral/pac.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/pac.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/pac.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/pac.cc)
 header/source file pair.
 
+### PM
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PM` class defines the layout of
+the Microchip SAM D21/DA1 PM peripheral and information about its registers.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PM` class is defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/pm.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/pm.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/pm.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/pm.cc)
+header/source file pair.
+
 ### SYSCTRL
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSCTRL` class defines the layout
 of the Microchip SAM D21/DA1 SYSCTRL peripheral and information about its registers.
@@ -71,6 +79,7 @@ The following peripheral instances are defined (listed alphabetically):
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC1`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC2`
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PM0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSCTRL0`
 
 The availability of these Microchip SAM D21/DA1 peripheral instance definitions depends on

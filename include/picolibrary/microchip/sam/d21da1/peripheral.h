@@ -26,6 +26,7 @@
 #include "picolibrary/microchip/sam/d21da1/peripheral/gclk.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/pac.h"
+#include "picolibrary/microchip/sam/d21da1/peripheral/pm.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/sysctrl.h"
 #include "picolibrary/peripheral.h"
 
@@ -38,6 +39,11 @@ namespace picolibrary::Microchip::SAM::D21DA1::Peripheral {
  * \brief PAC0.
  */
 using PAC0 = ::picolibrary::Peripheral::Instance<PAC, 0x40000000>;
+
+/**
+ * \brief PM0.
+ */
+using PM0 = ::picolibrary::Peripheral::Instance<PM, 0x40000400>;
 
 /**
  * \brief SYSCTRL0.
