@@ -487,7 +487,6 @@ class PM {
      * - PORT0 APB Clock Enable (PORT0)
      * - DMAC0 APB Clock Enable (DMAC0)
      * - USB0 APB Clock Enable (USB0)
-     * - RESERVED6 APB Clock Enable (RESERVED6)
      */
     class APBBMASK : public Register<std::uint32_t> {
       public:
