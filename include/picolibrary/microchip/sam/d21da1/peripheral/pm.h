@@ -832,7 +832,7 @@ class PM {
      * - Brown Out 12 Detector Reset (BOD12)
      * - Brown Out 33 Detector Reset (BOD33)
      * - External Reset (EXT)
-     * - Watchdog Reset (WDT0)
+     * - Watchdog Reset (WDT)
      * - System Reset Request (SYST)
      */
     class RCAUSE : public Register<std::uint8_t> {
@@ -846,7 +846,7 @@ class PM {
             static constexpr auto BOD33     = std::uint_fast8_t{ 1 }; ///< BOD33.
             static constexpr auto RESERVED3 = std::uint_fast8_t{ 1 }; ///< RESERVED3.
             static constexpr auto EXT       = std::uint_fast8_t{ 1 }; ///< EXT.
-            static constexpr auto WDT0      = std::uint_fast8_t{ 1 }; ///< WDT0.
+            static constexpr auto WDT       = std::uint_fast8_t{ 1 }; ///< WDT.
             static constexpr auto SYST      = std::uint_fast8_t{ 1 }; ///< SYST.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 1 }; ///< RESERVED7.
         };
@@ -860,8 +860,8 @@ class PM {
             static constexpr auto BOD33 = std::uint_fast8_t{ BOD12 + Size::BOD12 }; ///< BOD33.
             static constexpr auto RESERVED3 = std::uint_fast8_t{ BOD33 + Size::BOD33 }; ///< RESERVED3.
             static constexpr auto EXT = std::uint_fast8_t{ RESERVED3 + Size::RESERVED3 }; ///< EXT.
-            static constexpr auto WDT0 = std::uint_fast8_t{ EXT + Size::EXT }; ///< WDT0.
-            static constexpr auto SYST = std::uint_fast8_t{ WDT0 + Size::WDT0 }; ///< SYST.
+            static constexpr auto WDT  = std::uint_fast8_t{ EXT + Size::EXT }; ///< WDT.
+            static constexpr auto SYST = std::uint_fast8_t{ WDT + Size::WDT }; ///< SYST.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ SYST + Size::SYST }; ///< RESERVED7.
         };
 
@@ -874,7 +874,7 @@ class PM {
             static constexpr auto BOD33 = mask<std::uint8_t>( Size::BOD33, Bit::BOD33 ); ///< BOD33.
             static constexpr auto RESERVED3 = mask<std::uint8_t>( Size::RESERVED3, Bit::RESERVED3 ); ///< RESERVED3.
             static constexpr auto EXT = mask<std::uint8_t>( Size::EXT, Bit::EXT ); ///< EXT.
-            static constexpr auto WDT0 = mask<std::uint8_t>( Size::WDT0, Bit::WDT0 ); ///< WDT0.
+            static constexpr auto WDT = mask<std::uint8_t>( Size::WDT, Bit::WDT ); ///< WDT.
             static constexpr auto SYST = mask<std::uint8_t>( Size::SYST, Bit::SYST ); ///< SYST.
             static constexpr auto RESERVED7 = mask<std::uint8_t>( Size::RESERVED7, Bit::RESERVED7 ); ///< RESERVED7.
         };
