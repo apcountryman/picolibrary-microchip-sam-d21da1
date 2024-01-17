@@ -342,10 +342,10 @@ class PM {
      * - HPB0 AHB Clock Mask (HPB0)
      * - HPB1 AHB Clock Mask (HPB1)
      * - HPB2 AHB Clock Mask (HPB2)
-     * - DUS AHB Clock Mask (DSU)
-     * - NVMCTRL AHB Clock Mask (NVMCTRL)
-     * - DMAC AHB Clock Mask (DMAC)
-     * - USB AHB Clock Mask (USB)
+     * - DSU0 AHB Clock Mask (DSU0)
+     * - NVMCTRL0 AHB Clock Mask (NVMCTRL0)
+     * - DMAC0 AHB Clock Mask (DMAC0)
+     * - USB0 AHB Clock Mask (USB0)
      */
     class AHBMASK : public Register<std::uint32_t> {
       public:
@@ -356,10 +356,10 @@ class PM {
             static constexpr auto HPB0      = std::uint_fast8_t{ 1 };  ///< HPB0.
             static constexpr auto HPB1      = std::uint_fast8_t{ 1 };  ///< HPB1.
             static constexpr auto HPB2      = std::uint_fast8_t{ 1 };  ///< HPB2.
-            static constexpr auto DSU       = std::uint_fast8_t{ 1 };  ///< DSU.
-            static constexpr auto NVMCTRL   = std::uint_fast8_t{ 1 };  ///< NVMCTRL.
-            static constexpr auto DMAC      = std::uint_fast8_t{ 1 };  ///< DMAC.
-            static constexpr auto USB       = std::uint_fast8_t{ 1 };  ///< USB.
+            static constexpr auto DSU0      = std::uint_fast8_t{ 1 };  ///< DSU0.
+            static constexpr auto NVMCTRL0  = std::uint_fast8_t{ 1 };  ///< NVMCTRL0.
+            static constexpr auto DMAC0     = std::uint_fast8_t{ 1 };  ///< DMAC0.
+            static constexpr auto USB0      = std::uint_fast8_t{ 1 };  ///< USB0.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
@@ -370,11 +370,11 @@ class PM {
             static constexpr auto HPB0 = std::uint_fast8_t{}; ///< HPB0.
             static constexpr auto HPB1 = std::uint_fast8_t{ HPB0 + Size::HPB0 }; ///< HPB1.
             static constexpr auto HPB2 = std::uint_fast8_t{ HPB1 + Size::HPB1 }; ///< HPB2.
-            static constexpr auto DSU  = std::uint_fast8_t{ HPB2 + Size::HPB2 }; ///< DSU.
-            static constexpr auto NVMCTRL = std::uint_fast8_t{ DSU + Size::DSU }; ///< NVMCTRL.
-            static constexpr auto DMAC = std::uint_fast8_t{ NVMCTRL + Size::NVMCTRL }; ///< DMAC.
-            static constexpr auto USB = std::uint_fast8_t{ DMAC + Size::DMAC }; ///< USB.
-            static constexpr auto RESERVED7 = std::uint_fast8_t{ USB + Size::USB }; ///< RESERVED7.
+            static constexpr auto DSU0 = std::uint_fast8_t{ HPB2 + Size::HPB2 }; ///< DSU0.
+            static constexpr auto NVMCTRL0 = std::uint_fast8_t{ DSU0 + Size::DSU0 }; ///< NVMCTRL0.
+            static constexpr auto DMAC0 = std::uint_fast8_t{ NVMCTRL0 + Size::NVMCTRL0 }; ///< DMAC0.
+            static constexpr auto USB0 = std::uint_fast8_t{ DMAC0 + Size::DMAC0 }; ///< USB0.
+            static constexpr auto RESERVED7 = std::uint_fast8_t{ USB0 + Size::USB0 }; ///< RESERVED7.
         };
 
         /**
@@ -384,10 +384,10 @@ class PM {
             static constexpr auto HPB0 = mask<std::uint32_t>( Size::HPB0, Bit::HPB0 ); ///< HPB0.
             static constexpr auto HPB1 = mask<std::uint32_t>( Size::HPB1, Bit::HPB1 ); ///< HPB1.
             static constexpr auto HPB2 = mask<std::uint32_t>( Size::HPB2, Bit::HPB2 ); ///< HPB2.
-            static constexpr auto DSU = mask<std::uint32_t>( Size::DSU, Bit::DSU ); ///< DSU.
-            static constexpr auto NVMCTRL = mask<std::uint32_t>( Size::NVMCTRL, Bit::NVMCTRL ); ///< NVMCTRL.
-            static constexpr auto DMAC = mask<std::uint32_t>( Size::DMAC, Bit::DMAC ); ///< DMAC.
-            static constexpr auto USB = mask<std::uint32_t>( Size::USB, Bit::USB ); ///< USB.
+            static constexpr auto DSU0 = mask<std::uint32_t>( Size::DSU0, Bit::DSU0 ); ///< DSU0.
+            static constexpr auto NVMCTRL0 = mask<std::uint32_t>( Size::NVMCTRL0, Bit::NVMCTRL0 ); ///< NVMCTRL0.
+            static constexpr auto DMAC0 = mask<std::uint32_t>( Size::DMAC0, Bit::DMAC0 ); ///< DMAC0.
+            static constexpr auto USB0 = mask<std::uint32_t>( Size::USB0, Bit::USB0 ); ///< USB0.
             static constexpr auto RESERVED7 = mask<std::uint32_t>( Size::RESERVED7, Bit::RESERVED7 ); ///< RESERVED7.
         };
 
@@ -411,12 +411,12 @@ class PM {
      *
      * This register has the following fields:
      * - PAC0 APB Clock Enable (PAC0)
-     * - PM APB Clock Enable (PM)
-     * - SYSCTRL APB Clock Enable (SYSCTRL)
-     * - GCLK APB Clock Enable (GCLK)
-     * - WDT APB Clock Enable (WDT)
-     * - RTC APB Clock Enable (RTC)
-     * - EIC APB Clock Enable (EIC)
+     * - PM0 APB Clock Enable (PM0)
+     * - SYSCTRL0 APB Clock Enable (SYSCTRL0)
+     * - GCLK0 APB Clock Enable (GCLK0)
+     * - WDT0 APB Clock Enable (WDT0)
+     * - RTC0 APB Clock Enable (RTC0)
+     * - EIC0 APB Clock Enable (EIC0)
      */
     class APBAMASK : public Register<std::uint32_t> {
       public:
@@ -425,12 +425,12 @@ class PM {
          */
         struct Size {
             static constexpr auto PAC0      = std::uint_fast8_t{ 1 };  ///< PAC0.
-            static constexpr auto PM        = std::uint_fast8_t{ 1 };  ///< PM.
-            static constexpr auto SYSCTRL   = std::uint_fast8_t{ 1 };  ///< SYSCTRL.
-            static constexpr auto GCLK      = std::uint_fast8_t{ 1 };  ///< GCLK.
-            static constexpr auto WDT       = std::uint_fast8_t{ 1 };  ///< WDT.
-            static constexpr auto RTC       = std::uint_fast8_t{ 1 };  ///< RTC.
-            static constexpr auto EIC       = std::uint_fast8_t{ 1 };  ///< EIC.
+            static constexpr auto PM0       = std::uint_fast8_t{ 1 };  ///< PM0.
+            static constexpr auto SYSCTRL0  = std::uint_fast8_t{ 1 };  ///< SYSCTRL0.
+            static constexpr auto GCLK0     = std::uint_fast8_t{ 1 };  ///< GCLK0.
+            static constexpr auto WDT0      = std::uint_fast8_t{ 1 };  ///< WDT0.
+            static constexpr auto RTC0      = std::uint_fast8_t{ 1 };  ///< RTC0.
+            static constexpr auto EIC0      = std::uint_fast8_t{ 1 };  ///< EIC0.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 25 }; ///< RESERVED7.
         };
 
@@ -439,13 +439,13 @@ class PM {
          */
         struct Bit {
             static constexpr auto PAC0 = std::uint_fast8_t{}; ///< PAC0.
-            static constexpr auto PM   = std::uint_fast8_t{ PAC0 + Size::PAC0 }; ///< PM.
-            static constexpr auto SYSCTRL = std::uint_fast8_t{ PM + Size::PM }; ///< SYSCTRL.
-            static constexpr auto GCLK = std::uint_fast8_t{ SYSCTRL + Size::SYSCTRL }; ///< GCLK.
-            static constexpr auto WDT = std::uint_fast8_t{ GCLK + Size::GCLK }; ///< WDT.
-            static constexpr auto RTC = std::uint_fast8_t{ WDT + Size::WDT };   ///< RTC.
-            static constexpr auto EIC = std::uint_fast8_t{ RTC + Size::RTC };   ///< EIC.
-            static constexpr auto RESERVED7 = std::uint_fast8_t{ EIC + Size::EIC }; ///< RESERVED7.
+            static constexpr auto PM0  = std::uint_fast8_t{ PAC0 + Size::PAC0 }; ///< PM0.
+            static constexpr auto SYSCTRL0 = std::uint_fast8_t{ PM0 + Size::PM0 }; ///< SYSCTRL0.
+            static constexpr auto GCLK0 = std::uint_fast8_t{ SYSCTRL0 + Size::SYSCTRL0 }; ///< GCLK0.
+            static constexpr auto WDT0 = std::uint_fast8_t{ GCLK0 + Size::GCLK0 }; ///< WDT0.
+            static constexpr auto RTC0 = std::uint_fast8_t{ WDT0 + Size::WDT0 }; ///< RTC0.
+            static constexpr auto EIC0 = std::uint_fast8_t{ RTC0 + Size::RTC0 }; ///< EIC0.
+            static constexpr auto RESERVED7 = std::uint_fast8_t{ EIC0 + Size::EIC0 }; ///< RESERVED7.
         };
 
         /**
@@ -453,12 +453,12 @@ class PM {
          */
         struct Mask {
             static constexpr auto PAC0 = mask<std::uint32_t>( Size::PAC0, Bit::PAC0 ); ///< PAC0.
-            static constexpr auto PM = mask<std::uint32_t>( Size::PM, Bit::PM ); ///< PM.
-            static constexpr auto SYSCTRL = mask<std::uint32_t>( Size::SYSCTRL, Bit::SYSCTRL ); ///< SYSCTRL.
-            static constexpr auto GCLK = mask<std::uint32_t>( Size::GCLK, Bit::GCLK ); ///< GCLK.
-            static constexpr auto WDT = mask<std::uint32_t>( Size::WDT, Bit::WDT ); ///< WDT.
-            static constexpr auto RTC = mask<std::uint32_t>( Size::RTC, Bit::RTC ); ///< RTC.
-            static constexpr auto EIC = mask<std::uint32_t>( Size::EIC, Bit::EIC ); ///< EIC.
+            static constexpr auto PM0 = mask<std::uint32_t>( Size::PM0, Bit::PM0 ); ///< PM0.
+            static constexpr auto SYSCTRL0 = mask<std::uint32_t>( Size::SYSCTRL0, Bit::SYSCTRL0 ); ///< SYSCTRL0.
+            static constexpr auto GCLK0 = mask<std::uint32_t>( Size::GCLK0, Bit::GCLK0 ); ///< GCLK0.
+            static constexpr auto WDT0 = mask<std::uint32_t>( Size::WDT0, Bit::WDT0 ); ///< WDT0.
+            static constexpr auto RTC0 = mask<std::uint32_t>( Size::RTC0, Bit::RTC0 ); ///< RTC0.
+            static constexpr auto EIC0 = mask<std::uint32_t>( Size::EIC0, Bit::EIC0 ); ///< EIC0.
             static constexpr auto RESERVED7 = mask<std::uint32_t>( Size::RESERVED7, Bit::RESERVED7 ); ///< RESERVED7.
         };
 
@@ -482,11 +482,11 @@ class PM {
      *
      * This register has the following fields:
      * - PAC1 APB Clock Enable (PAC1)
-     * - DSU APB Clock Enable (DSU)
-     * - NVMCTRL APB Clock Enable (NVMCTRL)
-     * - PORT APB Clock Enable (PORT)
-     * - DMAC APB Clock Enable (DMAC)
-     * - USB APB Clock Enable (USB)
+     * - DSU0 APB Clock Enable (DSU0)
+     * - NVMCTRL0 APB Clock Enable (NVMCTRL0)
+     * - PORT0 APB Clock Enable (PORT0)
+     * - DMAC0 APB Clock Enable (DMAC0)
+     * - USB0 APB Clock Enable (USB0)
      * - RESERVED6 APB Clock Enable (RESERVED6)
      */
     class APBBMASK : public Register<std::uint32_t> {
@@ -496,11 +496,11 @@ class PM {
          */
         struct Size {
             static constexpr auto PAC1      = std::uint_fast8_t{ 1 };  ///< PAC1.
-            static constexpr auto DSU       = std::uint_fast8_t{ 1 };  ///< DSU.
-            static constexpr auto NVMCTRL   = std::uint_fast8_t{ 1 };  ///< NVMCTRL.
-            static constexpr auto PORT      = std::uint_fast8_t{ 1 };  ///< PORT.
-            static constexpr auto DMAC      = std::uint_fast8_t{ 1 };  ///< DMAC.
-            static constexpr auto USB       = std::uint_fast8_t{ 1 };  ///< USB.
+            static constexpr auto DSU0      = std::uint_fast8_t{ 1 };  ///< DSU0.
+            static constexpr auto NVMCTRL0  = std::uint_fast8_t{ 1 };  ///< NVMCTRL0.
+            static constexpr auto PORT0     = std::uint_fast8_t{ 1 };  ///< PORT0.
+            static constexpr auto DMAC0     = std::uint_fast8_t{ 1 };  ///< DMAC0.
+            static constexpr auto USB0      = std::uint_fast8_t{ 1 };  ///< USB0.
             static constexpr auto RESERVED6 = std::uint_fast8_t{ 26 }; ///< RESERVED6.
         };
 
@@ -509,12 +509,12 @@ class PM {
          */
         struct Bit {
             static constexpr auto PAC1 = std::uint_fast8_t{}; ///< PAC1.
-            static constexpr auto DSU  = std::uint_fast8_t{ PAC1 + Size::PAC1 }; ///< DSU.
-            static constexpr auto NVMCTRL = std::uint_fast8_t{ DSU + Size::DSU }; ///< NVMCTRL.
-            static constexpr auto PORT = std::uint_fast8_t{ NVMCTRL + Size::NVMCTRL }; ///< PORT.
-            static constexpr auto DMAC = std::uint_fast8_t{ PORT + Size::PORT }; ///< DMAC.
-            static constexpr auto USB  = std::uint_fast8_t{ DMAC + Size::DMAC }; ///< USB.
-            static constexpr auto RESERVED6 = std::uint_fast8_t{ USB + Size::USB }; ///< RESERVED6.
+            static constexpr auto DSU0 = std::uint_fast8_t{ PAC1 + Size::PAC1 }; ///< DSU0.
+            static constexpr auto NVMCTRL0 = std::uint_fast8_t{ DSU0 + Size::DSU0 }; ///< NVMCTRL0.
+            static constexpr auto PORT0 = std::uint_fast8_t{ NVMCTRL0 + Size::NVMCTRL0 }; ///< PORT0.
+            static constexpr auto DMAC0 = std::uint_fast8_t{ PORT0 + Size::PORT0 }; ///< DMAC0.
+            static constexpr auto USB0 = std::uint_fast8_t{ DMAC0 + Size::DMAC0 }; ///< USB0.
+            static constexpr auto RESERVED6 = std::uint_fast8_t{ USB0 + Size::USB0 }; ///< RESERVED6.
         };
 
         /**
@@ -522,11 +522,11 @@ class PM {
          */
         struct Mask {
             static constexpr auto PAC1 = mask<std::uint32_t>( Size::PAC1, Bit::PAC1 ); ///< PAC1.
-            static constexpr auto DSU = mask<std::uint32_t>( Size::DSU, Bit::DSU ); ///< DSU.
-            static constexpr auto NVMCTRL = mask<std::uint32_t>( Size::NVMCTRL, Bit::NVMCTRL ); ///< NVMCTRL.
-            static constexpr auto PORT = mask<std::uint32_t>( Size::PORT, Bit::PORT ); ///< PORT.
-            static constexpr auto DMAC = mask<std::uint32_t>( Size::DMAC, Bit::DMAC ); ///< DMAC.
-            static constexpr auto USB = mask<std::uint32_t>( Size::USB, Bit::USB ); ///< USB.
+            static constexpr auto DSU0 = mask<std::uint32_t>( Size::DSU0, Bit::DSU0 ); ///< DSU0.
+            static constexpr auto NVMCTRL0 = mask<std::uint32_t>( Size::NVMCTRL0, Bit::NVMCTRL0 ); ///< NVMCTRL0.
+            static constexpr auto PORT0 = mask<std::uint32_t>( Size::PORT0, Bit::PORT0 ); ///< PORT0.
+            static constexpr auto DMAC0 = mask<std::uint32_t>( Size::DMAC0, Bit::DMAC0 ); ///< DMAC0.
+            static constexpr auto USB0 = mask<std::uint32_t>( Size::USB0, Bit::USB0 ); ///< USB0.
             static constexpr auto RESERVED6 = mask<std::uint32_t>( Size::RESERVED6, Bit::RESERVED6 ); ///< RESERVED6.
         };
 
@@ -550,7 +550,7 @@ class PM {
      *
      * This register has the following fields:
      * - PAC2 APB Clock Enable (PAC2)
-     * - EVSYS APB Clock Enable (EVSYS)
+     * - EVSYS0 APB Clock Enable (EVSYS0)
      * - SERCOM0 APB Clock Enable (SERCOM0)
      * - SERCOM1 APB Clock Enable (SERCOM1)
      * - SERCOM2 APB Clock Enable (SERCOM2)
@@ -565,11 +565,11 @@ class PM {
      * - TC5 APB Clock Enable (TC5)
      * - TC6 APB Clock Enable (TC6)
      * - TC7 APB Clock Enable (TC7)
-     * - ADC APB Clock Enable (ADC)
-     * - AC APB Clock Enable (AC)
-     * - DAC APB Clock Enable (DAC)
-     * - PTC APB Clock Enable (PTC)
-     * - I2S APB Clock Enable (I2S)
+     * - ADC0 APB Clock Enable (ADC0)
+     * - AC0 APB Clock Enable (AC0)
+     * - DAC0 APB Clock Enable (DAC0)
+     * - PTC0 APB Clock Enable (PTC0)
+     * - I2S0 APB Clock Enable (I2S0)
      * - AC1 APB Clock Enable (AC1)
      * - TCC3 APB Clock Enable (TCC3)
      */
@@ -580,7 +580,7 @@ class PM {
          */
         struct Size {
             static constexpr auto PAC2       = std::uint_fast8_t{ 1 }; ///< PAC2.
-            static constexpr auto EVSYS      = std::uint_fast8_t{ 1 }; ///< EVSYS.
+            static constexpr auto EVSYS0     = std::uint_fast8_t{ 1 }; ///< EVSYS0.
             static constexpr auto SERCOM0    = std::uint_fast8_t{ 1 }; ///< SERCOM0.
             static constexpr auto SERCOM1    = std::uint_fast8_t{ 1 }; ///< SERCOM1.
             static constexpr auto SERCOM2    = std::uint_fast8_t{ 1 }; ///< SERCOM2.
@@ -595,11 +595,11 @@ class PM {
             static constexpr auto TC5        = std::uint_fast8_t{ 1 }; ///< TC5.
             static constexpr auto TC6        = std::uint_fast8_t{ 1 }; ///< TC6.
             static constexpr auto TC7        = std::uint_fast8_t{ 1 }; ///< TC7.
-            static constexpr auto ADC        = std::uint_fast8_t{ 1 }; ///< ADC.
-            static constexpr auto AC         = std::uint_fast8_t{ 1 }; ///< AC.
-            static constexpr auto DAC        = std::uint_fast8_t{ 1 }; ///< DAC.
-            static constexpr auto PTC        = std::uint_fast8_t{ 1 }; ///< PTC.
-            static constexpr auto I2S        = std::uint_fast8_t{ 1 }; ///< I2S.
+            static constexpr auto ADC0       = std::uint_fast8_t{ 1 }; ///< ADC0.
+            static constexpr auto AC0        = std::uint_fast8_t{ 1 }; ///< AC0.
+            static constexpr auto DAC0       = std::uint_fast8_t{ 1 }; ///< DAC0.
+            static constexpr auto PTC0       = std::uint_fast8_t{ 1 }; ///< PTC0.
+            static constexpr auto I2S0       = std::uint_fast8_t{ 1 }; ///< I2S0.
             static constexpr auto AC1        = std::uint_fast8_t{ 1 }; ///< AC1.
             static constexpr auto RESERVED22 = std::uint_fast8_t{ 2 }; ///< RESERVED22.
             static constexpr auto TCC3       = std::uint_fast8_t{ 1 }; ///< TCC3.
@@ -611,8 +611,8 @@ class PM {
          */
         struct Bit {
             static constexpr auto PAC2 = std::uint_fast8_t{}; ///< PAC2.
-            static constexpr auto EVSYS = std::uint_fast8_t{ PAC2 + Size::PAC2 }; ///< EVSYS.
-            static constexpr auto SERCOM0 = std::uint_fast8_t{ EVSYS + Size::EVSYS }; ///< SERCOM0.
+            static constexpr auto EVSYS0 = std::uint_fast8_t{ PAC2 + Size::PAC2 }; ///< EVSYS0.
+            static constexpr auto SERCOM0 = std::uint_fast8_t{ EVSYS0 + Size::EVSYS0 }; ///< SERCOM0.
             static constexpr auto SERCOM1 = std::uint_fast8_t{ SERCOM0 + Size::SERCOM0 }; ///< SERCOM1.
             static constexpr auto SERCOM2 = std::uint_fast8_t{ SERCOM1 + Size::SERCOM1 }; ///< SERCOM2.
             static constexpr auto SERCOM3 = std::uint_fast8_t{ SERCOM2 + Size::SERCOM2 }; ///< SERCOM3.
@@ -626,12 +626,12 @@ class PM {
             static constexpr auto TC5  = std::uint_fast8_t{ TC4 + Size::TC4 };   ///< TC5.
             static constexpr auto TC6  = std::uint_fast8_t{ TC5 + Size::TC5 };   ///< TC6.
             static constexpr auto TC7  = std::uint_fast8_t{ TC6 + Size::TC6 };   ///< TC7.
-            static constexpr auto ADC  = std::uint_fast8_t{ TC7 + Size::TC7 };   ///< ADC.
-            static constexpr auto AC   = std::uint_fast8_t{ ADC + Size::ADC };   ///< AC.
-            static constexpr auto DAC  = std::uint_fast8_t{ AC + Size::AC };     ///< DAC.
-            static constexpr auto PTC  = std::uint_fast8_t{ DAC + Size::DAC };   ///< PTC.
-            static constexpr auto I2S  = std::uint_fast8_t{ PTC + Size::PTC };   ///< I2S.
-            static constexpr auto AC1  = std::uint_fast8_t{ I2S + Size::I2S };   ///< AC1.
+            static constexpr auto ADC0 = std::uint_fast8_t{ TC7 + Size::TC7 }; ///< ADC0.
+            static constexpr auto AC0  = std::uint_fast8_t{ ADC0 + Size::ADC0 }; ///< AC0.
+            static constexpr auto DAC0 = std::uint_fast8_t{ AC0 + Size::AC0 }; ///< DAC0.
+            static constexpr auto PTC0 = std::uint_fast8_t{ DAC0 + Size::DAC0 }; ///< PTC0.
+            static constexpr auto I2S0 = std::uint_fast8_t{ PTC0 + Size::PTC0 }; ///< I2S0.
+            static constexpr auto AC1  = std::uint_fast8_t{ I2S0 + Size::I2S0 }; ///< AC1.
             static constexpr auto RESERVED22 = std::uint_fast8_t{ AC1 + Size::AC1 }; ///< RESERVED22.
             static constexpr auto TCC3 = std::uint_fast8_t{ RESERVED22 + Size::RESERVED22 }; ///< TCC3.
             static constexpr auto RESERVED25 = std::uint_fast8_t{ TCC3 + Size::TCC3 }; ///< RESERVED25.
@@ -642,7 +642,7 @@ class PM {
          */
         struct Mask {
             static constexpr auto PAC2 = mask<std::uint32_t>( Size::PAC2, Bit::PAC2 ); ///< PAC2.
-            static constexpr auto EVSYS = mask<std::uint32_t>( Size::EVSYS, Bit::EVSYS ); ///< EVSYS.
+            static constexpr auto EVSYS0 = mask<std::uint32_t>( Size::EVSYS0, Bit::EVSYS0 ); ///< EVSYS0.
             static constexpr auto SERCOM0 = mask<std::uint32_t>( Size::SERCOM0, Bit::SERCOM0 ); ///< SERCOM0.
             static constexpr auto SERCOM1 = mask<std::uint32_t>( Size::SERCOM1, Bit::SERCOM1 ); ///< SERCOM1.
             static constexpr auto SERCOM2 = mask<std::uint32_t>( Size::SERCOM2, Bit::SERCOM2 ); ///< SERCOM2.
@@ -657,11 +657,11 @@ class PM {
             static constexpr auto TC5 = mask<std::uint32_t>( Size::TC5, Bit::TC5 ); ///< TC5.
             static constexpr auto TC6 = mask<std::uint32_t>( Size::TC6, Bit::TC6 ); ///< TC6.
             static constexpr auto TC7 = mask<std::uint32_t>( Size::TC7, Bit::TC7 ); ///< TC7.
-            static constexpr auto ADC = mask<std::uint32_t>( Size::ADC, Bit::ADC ); ///< ADC.
-            static constexpr auto AC = mask<std::uint32_t>( Size::AC, Bit::AC ); ///< AC.
-            static constexpr auto DAC = mask<std::uint32_t>( Size::DAC, Bit::DAC ); ///< DAC.
-            static constexpr auto PTC = mask<std::uint32_t>( Size::PTC, Bit::PTC ); ///< PTC.
-            static constexpr auto I2S = mask<std::uint32_t>( Size::I2S, Bit::I2S ); ///< I2S.
+            static constexpr auto ADC0 = mask<std::uint32_t>( Size::ADC0, Bit::ADC0 ); ///< ADC0.
+            static constexpr auto AC0 = mask<std::uint32_t>( Size::AC0, Bit::AC0 ); ///< AC0.
+            static constexpr auto DAC0 = mask<std::uint32_t>( Size::DAC0, Bit::DAC0 ); ///< DAC0.
+            static constexpr auto PTC0 = mask<std::uint32_t>( Size::PTC0, Bit::PTC0 ); ///< PTC0.
+            static constexpr auto I2S0 = mask<std::uint32_t>( Size::I2S0, Bit::I2S0 ); ///< I2S0.
             static constexpr auto AC1 = mask<std::uint32_t>( Size::AC1, Bit::AC1 ); ///< AC1.
             static constexpr auto RESERVED22 = mask<std::uint32_t>( Size::RESERVED22, Bit::RESERVED22 ); ///< RESERVED22.
             static constexpr auto TCC3 = mask<std::uint32_t>( Size::TCC3, Bit::TCC3 ); ///< TCC3.
@@ -832,7 +832,7 @@ class PM {
      * - Brown Out 12 Detector Reset (BOD12)
      * - Brown Out 33 Detector Reset (BOD33)
      * - External Reset (EXT)
-     * - Watchdog Reset (WDT)
+     * - Watchdog Reset (WDT0)
      * - System Reset Request (SYST)
      */
     class RCAUSE : public Register<std::uint8_t> {
@@ -846,7 +846,7 @@ class PM {
             static constexpr auto BOD33     = std::uint_fast8_t{ 1 }; ///< BOD33.
             static constexpr auto RESERVED3 = std::uint_fast8_t{ 1 }; ///< RESERVED3.
             static constexpr auto EXT       = std::uint_fast8_t{ 1 }; ///< EXT.
-            static constexpr auto WDT       = std::uint_fast8_t{ 1 }; ///< WDT.
+            static constexpr auto WDT0      = std::uint_fast8_t{ 1 }; ///< WDT0.
             static constexpr auto SYST      = std::uint_fast8_t{ 1 }; ///< SYST.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ 1 }; ///< RESERVED7.
         };
@@ -860,8 +860,8 @@ class PM {
             static constexpr auto BOD33 = std::uint_fast8_t{ BOD12 + Size::BOD12 }; ///< BOD33.
             static constexpr auto RESERVED3 = std::uint_fast8_t{ BOD33 + Size::BOD33 }; ///< RESERVED3.
             static constexpr auto EXT = std::uint_fast8_t{ RESERVED3 + Size::RESERVED3 }; ///< EXT.
-            static constexpr auto WDT  = std::uint_fast8_t{ EXT + Size::EXT }; ///< WDT.
-            static constexpr auto SYST = std::uint_fast8_t{ WDT + Size::WDT }; ///< SYST.
+            static constexpr auto WDT0 = std::uint_fast8_t{ EXT + Size::EXT }; ///< WDT0.
+            static constexpr auto SYST = std::uint_fast8_t{ WDT0 + Size::WDT0 }; ///< SYST.
             static constexpr auto RESERVED7 = std::uint_fast8_t{ SYST + Size::SYST }; ///< RESERVED7.
         };
 
@@ -874,7 +874,7 @@ class PM {
             static constexpr auto BOD33 = mask<std::uint8_t>( Size::BOD33, Bit::BOD33 ); ///< BOD33.
             static constexpr auto RESERVED3 = mask<std::uint8_t>( Size::RESERVED3, Bit::RESERVED3 ); ///< RESERVED3.
             static constexpr auto EXT = mask<std::uint8_t>( Size::EXT, Bit::EXT ); ///< EXT.
-            static constexpr auto WDT = mask<std::uint8_t>( Size::WDT, Bit::WDT ); ///< WDT.
+            static constexpr auto WDT0 = mask<std::uint8_t>( Size::WDT0, Bit::WDT0 ); ///< WDT0.
             static constexpr auto SYST = mask<std::uint8_t>( Size::SYST, Bit::SYST ); ///< SYST.
             static constexpr auto RESERVED7 = mask<std::uint8_t>( Size::RESERVED7, Bit::RESERVED7 ); ///< RESERVED7.
         };
