@@ -28,6 +28,7 @@
 #include "picolibrary/microchip/sam/d21da1/peripheral/pac.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/pm.h"
 #include "picolibrary/microchip/sam/d21da1/peripheral/sysctrl.h"
+#include "picolibrary/microchip/sam/d21da1/peripheral/wdt.h"
 #include "picolibrary/peripheral.h"
 
 /**
@@ -54,6 +55,11 @@ using SYSCTRL0 = ::picolibrary::Peripheral::Instance<SYSCTRL, 0x40000800>;
  * \brief GCLK0.
  */
 using GCLK0 = ::picolibrary::Peripheral::Instance<GCLK, 0x40000C00>;
+
+/**
+ * \brief WDT0.
+ */
+using WDT0 = ::picolibrary::Peripheral::Instance<WDT, 0x40001000>;
 
 /**
  * \brief PAC1.
