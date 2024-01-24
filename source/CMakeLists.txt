@@ -31,6 +31,7 @@ set(
     "picolibrary/microchip/sam/d21da1/peripheral/nvmctrl.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/pac.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/pm.cc"
+    "picolibrary/microchip/sam/d21da1/peripheral/rtc.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/sysctrl.cc"
     "picolibrary/microchip/sam/d21da1/peripheral/wdt.cc"
 )
