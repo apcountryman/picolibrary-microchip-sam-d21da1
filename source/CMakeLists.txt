@@ -55,6 +55,20 @@ target_link_libraries(
 )
 
 add_library(
+    picolibrary-microchip-sam-d21da1-interrupt-default_vector_table OBJECT
+    "picolibrary/microchip/sam/d21da1/interrupt/default_vector_table.cc"
+)
+target_include_directories(
+    picolibrary-microchip-sam-d21da1-interrupt-default_vector_table
+    PUBLIC "${PROJECT_SOURCE_DIR}/include"
+)
+target_link_libraries(
+    picolibrary-microchip-sam-d21da1-interrupt-default_vector_table
+    picolibrary-arm-cortex-m0plus
+    picolibrary-microchip-sam-d21da1
+)
+
+add_library(
     picolibrary-microchip-sam-d21da1-version
     "${CMAKE_CURRENT_BINARY_DIR}/picolibrary/microchip/sam/d21da1/version.cc"
 )

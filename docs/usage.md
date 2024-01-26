@@ -33,6 +33,18 @@ target_link_libraries(
 )
 ```
 
+The `picolibrary-microchip-sam-d21da1` static library does not include the default
+interrupt vector table instance and associated interrupt handler functions.
+To use the default interrupt vector table instance and associated interrupt handler
+functions, include the `picolibrary-microchip-sam-d21da1-interrupt-default_vector_table`
+object library object in an executable's sources list.
+```cmake
+add_executable(
+    foo
+    $<TARGET_OBJECTS:picolibrary-microchip-sam-d21da1-interrupt-default_vector_table>
+)
+```
+
 ### Configuration Options
 picolibrary-microchip-sam-d21da1 supports the following project configuration options:
 - `PICOLIBRARY_MICROCHIP_SAM_D21DA1_ENABLE_INTERACTIVE_TESTING` (defaults to `OFF`):
