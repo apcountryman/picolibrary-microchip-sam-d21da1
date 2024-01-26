@@ -7,6 +7,7 @@
     1. [NVMCTRL](#nvmctrl)
     1. [PAC](#pac)
     1. [PM](#pm)
+    1. [RTC](#rtc)
     1. [SYSCTRL](#sysctrl)
     1. [WDT](#wdt)
 1. [Peripheral Instances](#peripheral-instances)
@@ -67,6 +68,42 @@ The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PM` class is defined in 
 [`include/picolibrary/microchip/sam/d21da1/peripheral/pm.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/pm.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/pm.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/pm.cc)
 header/source file pair.
 
+### RTC
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC` class defines the layout of
+the Microchip SAM D21/DA1 RTC peripheral and information about its registers.
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC` class is defined in the
+[`include/picolibrary/microchip/sam/d21da1/peripheral/rtc.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/peripheral/rtc.h)/[`source/picolibrary/microchip/sam/d21da1/peripheral/rtc.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/peripheral/rtc.cc)
+header/source file pair.
+
+The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC` class has a different
+structure than other Microchip SAM D21/DA1 peripheral classes due to the Microchip SAM
+D21DA1 RTC peripheral's multiple operating modes (mode 0 (32-bit counter), mode 1 (16-bit
+counter), and mode 2 (clock/calendar)).
+Classes and variables that would normally be members of the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC` class are instead members of the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE0`,
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE1`, and
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE2` member classes.
+The RTC peripheral's `::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE0`
+instance is accessed via the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::mode0` member variable.
+The RTC peripheral's `::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE1`
+instance is accessed via the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::mode1` member variable.
+The RTC peripheral's `::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE2`
+instance is accessed via the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::mode2` member variable.
+
+The Microchip SAM D21/DA1 RTC peripheral mode 2 ALARM and MASK registers are organized as
+"Alarm Groups" and therefore the member classes and member variables associated with these
+registers are members of the
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE2::Alarm_Group` member
+class.
+`::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC::MODE2::Alarm_Group` instances are
+accessed via the
+`::picolibrary::Microchip::SAM::D21DA1::Periperhal::RTC::MODE2::alarm_group` member
+variable.
+
 ### SYSCTRL
 The `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSCTRL` class defines the layout
 of the Microchip SAM D21/DA1 SYSCTRL peripheral and information about its registers.
@@ -97,6 +134,7 @@ The following peripheral instances are defined (listed alphabetically):
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC1`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PAC2`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::PM0`
+- `::picolibrary::Microchip::SAM::D21DA1::Peripheral::RTC0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::SYSCTRL0`
 - `::picolibrary::Microchip::SAM::D21DA1::Peripheral::WDT0`
 
