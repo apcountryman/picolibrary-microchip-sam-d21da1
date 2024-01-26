@@ -528,7 +528,7 @@ class RTC {
         };
 
         /**
-         * \brief (FREQCORR) register.
+         * \brief Frequency Correction (FREQCORR) register.
          *
          * This register has the following fields:
          * - Correction Value (VALUE)
@@ -836,7 +836,7 @@ class RTC {
                 static constexpr auto PEREO7     = std::uint_fast8_t{ 1 }; ///< PEREO7.
                 static constexpr auto CMPEO0     = std::uint_fast8_t{ 1 }; ///< CMPEO0.
                 static constexpr auto CMPEO1     = std::uint_fast8_t{ 1 }; ///< CMPEO1.
-                static constexpr auto RESERVED10 = std::uint_fast8_t{ 1 }; ///< RESERVED10.
+                static constexpr auto RESERVED10 = std::uint_fast8_t{ 5 }; ///< RESERVED10.
                 static constexpr auto OVFEO      = std::uint_fast8_t{ 1 }; ///< OVFEO.
             };
 
@@ -1163,7 +1163,7 @@ class RTC {
         };
 
         /**
-         * \brief (FREQCORR) register.
+         * \brief Frequency Correction (FREQCORR) register.
          *
          * This register has the following fields:
          * - Correction Value (VALUE)
@@ -1800,7 +1800,7 @@ class RTC {
         };
 
         /**
-         * \brief (FREQCORR) register.
+         * \brief Frequency Correction (FREQCORR) register.
          *
          * This register has the following fields:
          * - Correction Value (VALUE)
