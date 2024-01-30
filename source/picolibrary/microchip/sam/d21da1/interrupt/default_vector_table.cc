@@ -17,7 +17,8 @@
 
 /**
  * \file
- * \brief picolibrary::Microchip::SAM::D21DA1::Interrupt implementation.
+ * \brief picolibrary::Microchip::SAM::D21DA1::Interrupt default vector table
+ *        implementation.
  */
 
 #include "picolibrary/microchip/sam/d21da1/interrupt/default_vector_table.h"
