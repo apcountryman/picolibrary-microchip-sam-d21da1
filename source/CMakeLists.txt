@@ -42,7 +42,7 @@ set(
 )
 
 add_library(
-    picolibrary-microchip-sam-d21da1
+    picolibrary-microchip-sam-d21da1 STATIC
     ${PICOLIBRARY_MICROCHIP_SAM_D21DA1_SOURCE_FILES}
 )
 target_include_directories(
@@ -69,7 +69,7 @@ target_link_libraries(
 )
 
 add_library(
-    picolibrary-microchip-sam-d21da1-version
+    picolibrary-microchip-sam-d21da1-version STATIC
     "${CMAKE_CURRENT_BINARY_DIR}/picolibrary/microchip/sam/d21da1/version.cc"
 )
 target_include_directories(
