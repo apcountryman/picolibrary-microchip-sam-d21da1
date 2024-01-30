@@ -7,8 +7,24 @@ header/source file pair.
 - [Default Vector Table](#default-vector-table)
 
 ## Default Vector Table
-The default vector table instance provided by picolibrary-microchip-sam-d21da1 is placed
-in the `.vectors` section and is populated as follows:
+The default interrupt vector table instance and associated interrupt handler functions are
+defined in the
+[`include/picolibrary/microchip/sam/d21da1/interrupt/default_vector_table.h`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/include/picolibrary/microchip/sam/d21da1/interrupt/default_vector_table.h)/[`source/picolibrary/microchip/sam/d21da1/interrupt/default_vector_table.cc`](https://github.com/apcountryman/picolibrary-microchip-sam-d21da1/blob/main/source/picolibrary/microchip/sam/d21da1/interrupt/default_vector_table.cc)
+header/source file pair.
+The default interrupt vector table instance and associated interrupt handler functions are
+not included in the `picolibrary-microchip-samd-d21da1` static library.
+To use the default interrupt vector table instance and associated interrupt handler
+functions, include the `picolibrary-microchip-sam-d21da1-interrupt-default_vector_table`
+object library objects in an executable's sources list.
+```cmake
+add_executable(
+    foo
+    $<TARGET_OBJECTS>:picolibrary-microchip-sam-d21da1-interrupt-default_vector_table>
+)
+```
+
+The default interrupt vector table instance is placed in the `.vectors` section and is
+populated as follows:
 - Initial stack pointer value: `_stack_end` (must be defined by linker script)
 - Reset handler: `::picolibrary::Microchip::SAM::D21DA1::Interrupt::handle_reset()`
 - NMI handler: `::picolibrary::Microchip::SAM::D21DA1::Interrupt::handle_nmi()`
